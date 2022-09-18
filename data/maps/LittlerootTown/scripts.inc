@@ -983,6 +983,7 @@ LatilynTown_EventScript_SeeRival_Upmost::
 	waitmovement 0
 	msgbox LatilynTown_EventScript_SeeRival_Upmost_Text_0
 	applymovement 1, rival_walk_away
+	waitmovement 0
 	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
 	setvar VAR_SEEN_RIVAL_FOR_FIRST_TIME, 1
 	removeobject 1
@@ -1003,6 +1004,7 @@ LatilynTown_EventScript_SeeRival_Downmost::
 	waitmovement 0
 	msgbox LatilynTown_EventScript_SeeRival_Downmost_Text_0
 	applymovement 1, rival_walk_away
+	waitmovement 0
 	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
 	setvar VAR_SEEN_RIVAL_FOR_FIRST_TIME, 1
 	removeobject 1
