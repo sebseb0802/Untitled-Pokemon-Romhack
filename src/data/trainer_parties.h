@@ -15,7 +15,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route1_Youngster_1[] = {
     {
     .iv = 0,
     .lvl = 3,
-    .species = SPECIES_NIDORAN_M
+    .species = SPECIES_RATTATA
     }
 };
 
@@ -56,7 +56,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_KazaniPass_Camper_1[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_KazaniPass_Camper_2[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 4,
     .species = SPECIES_MURKROW,
     },
     {
@@ -69,7 +69,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_KazaniPass_Camper_2[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_KazaniPass_Camper_3[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 5,
     .species = SPECIES_VENIPEDE,
     },
     {
@@ -108,47 +108,52 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route2_Youngster_3[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Route2_Rival[] = {
     {
     .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_MURKROW,
+    },
+    {
+    .iv = 0,
     .lvl = 8,
     .species = SPECIES_TYROGUE,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_BlackBelt1[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
-    },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .iv = 10,
+    .lvl = 10,
+    .species = SPECIES_MACHOP,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_BlackBelt2[] = {
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .iv = 10,
+    .lvl = 9,
+    .species = SPECIES_MANKEY,
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .iv = 10,
+    .lvl = 9,
+    .species = SPECIES_MACHOP,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_Mach[] = {
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
+    .iv = 10,
+    .lvl = 10,
+    .species = SPECIES_MANKEY,
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .iv = 10,
+    .lvl = 11,
+    .species = SPECIES_TYROGUE,
+    },
+    {
+    .iv = 10,
+    .lvl = 13,
+    .species = SPECIES_RIOLU,
     }
 };
 

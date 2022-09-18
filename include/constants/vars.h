@@ -105,7 +105,7 @@
 #define VAR_SEEN_RIVAL_FOR_FIRST_TIME        0x4056 // Used Var
 #define VAR_PETALBURG_CITY_STATE             0x4057
 #define VAR_SLATEPORT_CITY_STATE             0x4058
-#define VAR_MAUVILLE_CITY_STATE              0x4059 // Unused Var
+#define VAR_BATTLED_RIVAL_ROUTE_2             0x4059 // Used Var
 #define VAR_RUSTBORO_CITY_STATE              0x405A
 #define VAR_FORTREE_CITY_STATE               0x405B // Unused Var
 #define VAR_LILYCOVE_CITY_STATE              0x405C // Unused Var

@@ -1065,7 +1065,7 @@ LatilynTown_EventScript_ChooseStarter_4:
 	return
 
 LatilynTown_EventScript_ChooseStarter_5:
-	showmonpic SPECIES_TEPIG, 5, 8
+	showmonpic SPECIES_TEPIG, 5, 1
 	playmoncry SPECIES_TEPIG, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox LatilynTown_EventScript_ChooseStarter_Text_0
@@ -1078,7 +1078,7 @@ LatilynTown_EventScript_ChooseStarter_5:
 	goto LatilynTown_EventScript_ChooseStarter_4
 
 LatilynTown_EventScript_ChooseStarter_6:
-	showmonpic SPECIES_TOTODILE, 5, 8
+	showmonpic SPECIES_TOTODILE, 5, 1
 	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox LatilynTown_EventScript_ChooseStarter_Text_1
@@ -1091,7 +1091,7 @@ LatilynTown_EventScript_ChooseStarter_6:
 	goto LatilynTown_EventScript_ChooseStarter_4
 
 LatilynTown_EventScript_ChooseStarter_7:
-	showmonpic SPECIES_TURTWIG, 5, 8
+	showmonpic SPECIES_TURTWIG, 5, 1
 	playmoncry SPECIES_TURTWIG, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox LatilynTown_EventScript_ChooseStarter_Text_2

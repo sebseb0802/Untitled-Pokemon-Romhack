@@ -141,14 +141,124 @@ Route2_EventScript_OldMan::
 	end
 
 
+Route2_EventScript_Rival_Upmost::
+	lockall
+	applymovement 5, scare_player_upmost
+	waitmovement 0
+	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro
+	msgbox Route2_EventScript_Rival_Upmost_Text_0
+	applymovement 5, rival_contemplates
+	waitmovement 0
+	delay 180
+	applymovement 5, rival_faces_player_again
+	waitmovement 0
+	msgbox Route2_EventScript_Rival_Upmost_Text_1
+	applymovement 5, route2_rival_walks_away
+	waitmovement 0
+	setvar VAR_BATTLED_RIVAL_ROUTE_2, 1
+	setflag FLAG_RIVAL_ENCOUNTER_ROUTE_2
+	removeobject 5
+	releaseall
+	end
+
+
+Route2_EventScript_Rival_Downmost::
+	lockall
+	applymovement 5, scare_player_downmost
+	waitmovement 0
+	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro
+	msgbox Route2_EventScript_Rival_Upmost_Text_0, MSGBOX_AUTOCLOSE
+	applymovement 5, rival_contemplates
+	waitmovement 0
+	delay 180
+	applymovement 5, rival_faces_player_again
+	waitmovement 0
+	msgbox Route2_EventScript_Rival_Downmost_Text_0
+	closemessage
+	applymovement 5, route2_rival_walks_away
+	waitmovement 0
+	setvar VAR_BATTLED_RIVAL_ROUTE_2, 1
+	setflag FLAG_RIVAL_ENCOUNTER_ROUTE_2
+	removeobject 5
+	releaseall
+	end
+
+
+scare_player_upmost:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	step_end
+
+scare_player_downmost:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	step_end
+
+rival_contemplates:
+	face_right
+	emote_exclamation_mark
+	step_end
+
+rival_faces_player_again:
+	face_player
+	step_end
+
+route2_rival_walks_away:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 Route2_EventScript_Signpost_Text_0:
-	.string "{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu City,\l{DOWN_ARROW}Route 10$"
+	.string "{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu Town,\l{DOWN_ARROW}Route 10$"
 
 Route2_EventScript_OldMan_Text_0:
 	.string "Isn't it amazing to be up here on these\n"
 	.string "mounds??\p"
-	.string "And the bridges that connect them are\n"
-	.string "just the cherry on top!$"
+	.string "I was so excited to be up here, that I\n"
+	.string "dropped one of my Great Balls...\p"
+	.string "I've looked everywhere but it's pretty\n"
+	.string "hidden, I'll say. I dropped it somewhere\l"
+	.string "near the hedges to our left...$"
+
+Route2_EventScript_Rival_Upmost_Text_0:
+	.string "...\p"
+	.string "WHAT?! How could I lose to someone like\n"
+	.string "you??\l"
+	.string "With one of my father's prized Pokémon\l"
+	.string "no less.$"
+
+Route2_EventScript_Rival_Upmost_Text_1:
+	.string "...\p"
+	.string "it's no big deal...THAT'S RIGHT! No big\n"
+	.string "deal! You've had way more experience\l"
+	.string "with Pokémon than me. You came from\l"
+	.string "Unova, after all.\l"
+	.string "You must know so much already...\p"
+	.string "Yes, that's why I...lost.\p"
+	.string "But mark my words, {PLAYER}. I won't\n"
+	.string "let this happen again.$"
+
+Route2_EventScript_Rival_Downmost_Text_0:
+	.string "...\p"
+	.string "it's no big deal...\l"
+	.string "THAT'S RIGHT!\l"
+	.string "No big deal!\l"
+	.string "You've had way more experience with\l"
+	.string "Pokémon than me. You came from Unova,\l"
+	.string "after all.\l"
+	.string "You must know so much already...\p"
+	.string "Yes, that's why I...lost.\p"
+	.string "But mark my words, {PLAYER}.\p"
+	.string "I won't let this happen again.$"
 
 lass2_intro::
 	.string "Now where are you off to?$"
@@ -157,7 +267,18 @@ lass2_outro::
 	.string "Too strong!!$"
 
 youngster3_intro::
-	.string "You look weak enought to me!$"
+	.string "You look weak enough to me!$"
 
 youngster3_outro::
 	.string "Huh?! I was weaker?!$"
+
+route2_rival_intro::
+	.string "BOO! Hahaha, did I scare you? Pee\n"
+	.string "yourself a little, did you?\p"
+	.string "Haha I expected nothing less from\n"
+	.string "someone like you!\l"
+	.string "Let's see if you're just as weak as you\l"
+	.string "seem!$"
+
+route2_rival_outro::
+	.string "My strong Pokémon wasn't good enough?!$"

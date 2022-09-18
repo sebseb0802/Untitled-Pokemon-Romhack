@@ -81,7 +81,7 @@ KazaniVillage_House1_EventScript_KazaniChief_Text_4:
 	.string "Spruce, I can send a messenger.\p"
 	.string "For what to do next...\p"
 	.string "Ah-ha! That's right!\p"
-	.string "There is a gym just in Satatsu City,\n"
+	.string "There is a gym just in Satatsu Town,\n"
 	.string "just east of here! Simply take the\l"
 	.string "Kazani Pass on the east side of this\l"
 	.string "village onto Route 2 and you'll be on\l"

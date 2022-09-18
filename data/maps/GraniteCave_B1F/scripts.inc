@@ -55,7 +55,7 @@ KazaniPass_EventScript_Give_Return_Text_1:
 	.string "your opponents! How sweet!$"
 
 camper2_intro::
-	.string "On your way to Satatsu City? I'll beat you there!$"
+	.string "On your way to Satatsu Town? I'll beat you there!$"
 
 camper2_outro::
 	.string "I guess you'll beat me there...$"

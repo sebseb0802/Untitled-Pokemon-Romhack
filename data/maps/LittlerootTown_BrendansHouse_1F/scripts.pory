@@ -6,13 +6,13 @@ script LatilynTown_EventScript_StartAdventure {
     waitmovement(0)
     applymovement(1, mum_face_player)
     waitmovement(0)
-    msgbox(format("How did you sleep?\p I know it's only been a few weeks, but Professor Spruce asked me to ask you if you wanted to conduct some research on behalf of him in Menai.\l How does that sound? A real adventure, right?\pDon't forget that you'll have Pokémon with you always, so don't worry about being lonely! Speaking of which... the Professor told me about a little gift that he's planning on giving you when you arrive at the lab. Better get going then!"))
+    msgbox(format("How did you sleep?\p I know it's only been a few weeks, but Professor Spruce was looking for you to see if you'd be up for doing some reasearch for him around Menai.\l How does that sound? A real adventure, right?\pDon't forget that you'll have Pokémon with you always, so don't worry about being lonely!\pI heard that the Professor's got a little gift plan for you when you get to the lab.\pBetter get going then!"))
     msgbox(format("...Oh! I almost forgot!\p Here's a Pokénav!"))
 	playfanfare(MUS_OBTAIN_ITEM)
 	msgbox("Obtained a Pokénav!")
 	waitfanfare
 	setflag(FLAG_SYS_POKENAV_GET)
-	msgbox(format("You can do all sorts of nifty things with it! I'm sure you'll work it out. Don't forget to visit sometimes to tell me all about your adventures! Have fun and safe travels, sweetie!"))
+	msgbox(format("You can do all sorts of nifty things with it!\lI'm sure you'll work it out.\pDon't forget to visit sometimes to tell me all about your adventures!\pHave fun and safe travels, sweetie!"))
     closemessage
     setvar(VAR_ADVENTURE_STARTED, 1)
     release

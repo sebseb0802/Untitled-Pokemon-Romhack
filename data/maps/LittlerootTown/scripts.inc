@@ -1025,6 +1025,8 @@ rival_walk_away:
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
 	step_end
 
 LatilynTown_EventScript_OldLady::
@@ -1071,7 +1073,8 @@ LatilynTown_EventScript_SeeRival_Upmost_Text_0:
 	.string "powerful Pokémon so I don't need some\l"
 	.string "weak one from Prof. Spruce.\p"
 	.string "If you want to know, I'll be heading to\n"
-	.string "Satatsu City to get my first gym badge.\p"
+	.string "Satatsu Town to get my first gym\l"
+	.string "badge.\p"
 	.string "That's right! I'm going to become the\n"
 	.string "strongest trainer ever...something\l"
 	.string "that you'll never even come close to!\p"
@@ -1089,7 +1092,8 @@ LatilynTown_EventScript_SeeRival_Downmost_Text_0:
 	.string "powerful Pokémon so I don't need some\l"
 	.string "weak one from Prof. Spruce.\p"
 	.string "If you want to know, I'll be heading to\n"
-	.string "Satatsu City to get my first gym badge.\p"
+	.string "Satatsu Town to get my first gym\l"
+	.string "badge.\p"
 	.string "That's right! I'm going to become the\n"
 	.string "strongest trainer ever...something\l"
 	.string "that you'll never even come close to!\p"

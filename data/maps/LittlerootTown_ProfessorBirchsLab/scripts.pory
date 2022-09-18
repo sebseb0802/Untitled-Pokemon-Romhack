@@ -1027,7 +1027,7 @@ script LatilynTown_EventScript_ChooseStarter{
         multichoice(25, 5, MULTI_STARTER_CHOICE, 0)
         closemessage
         if (var(VAR_RESULT) == 0){
-            showmonpic(SPECIES_TEPIG, 5, 8)
+            showmonpic(SPECIES_TEPIG, 5, 1)
             playmoncry(SPECIES_TEPIG, CRY_MODE_NORMAL)
             waitmoncry
             msgbox("{PLAYER} chose Tepig!")
@@ -1039,7 +1039,7 @@ script LatilynTown_EventScript_ChooseStarter{
             setflag(FLAG_RECEIVED_STARTER)
         }
         elif (var(VAR_RESULT) == 1){
-            showmonpic(SPECIES_TOTODILE, 5, 8)
+            showmonpic(SPECIES_TOTODILE, 5, 1)
             playmoncry(SPECIES_TOTODILE, CRY_MODE_NORMAL)
             waitmoncry
             msgbox("{PLAYER} chose Totodile!")
@@ -1051,7 +1051,7 @@ script LatilynTown_EventScript_ChooseStarter{
             setflag(FLAG_RECEIVED_STARTER)
         }
         elif (var(VAR_RESULT) == 2){
-            showmonpic(SPECIES_TURTWIG, 5, 8)
+            showmonpic(SPECIES_TURTWIG, 5, 1)
             playmoncry(SPECIES_TURTWIG, CRY_MODE_NORMAL)
             waitmoncry
             msgbox("{PLAYER} chose Turtwig!")

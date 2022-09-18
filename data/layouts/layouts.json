@@ -95,7 +95,7 @@
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
       "width": 40,
-      "height": 24,
+      "height": 26,
       "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
@@ -114,9 +114,9 @@
     {
       "id": "LAYOUT_DEWFORD_TOWN",
       "name": "DewfordTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 30,
+      "height": 17,
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/DewfordTown/border.bin",
       "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
@@ -174,7 +174,7 @@
     {
       "id": "LAYOUT_ROUTE102",
       "name": "Route102_Layout",
-      "width": 50,
+      "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
@@ -644,10 +644,10 @@
     {
       "id": "LAYOUT_DEWFORD_TOWN_GYM",
       "name": "DewfordTown_Gym_Layout",
-      "width": 18,
-      "height": 28,
+      "width": 16,
+      "height": 16,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_DewfordGym",
+      "secondary_tileset": "gTileset_PetalburgGym",
       "border_filepath": "data/layouts/DewfordTown_Gym/border.bin",
       "blockdata_filepath": "data/layouts/DewfordTown_Gym/map.bin"
     },

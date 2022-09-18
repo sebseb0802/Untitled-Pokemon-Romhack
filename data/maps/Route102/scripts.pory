@@ -128,7 +128,7 @@ script Route2_EventScript_Youngster3{
 }
 
 text youngster3_intro{
-    format("You look weak enought to me!")
+    format("You look weak enough to me!")
 }
 
 text youngster3_outro{
@@ -145,7 +145,7 @@ script Route2_EventScript_Pokeball1{
 
 script Route2_EventScript_Signpost{
     lock
-    msgbox("{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu City,\l{DOWN_ARROW}Route 10")
+    msgbox("{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu Town,\l{DOWN_ARROW}Route 10")
     closemessage
     release
     end
@@ -155,7 +155,82 @@ script Route2_EventScript_Signpost{
 script Route2_EventScript_OldMan{
     lockall
     faceplayer
-    msgbox(format("Isn't it amazing to be up here on these mounds??\pAnd the bridges that connect them are just the cherry on top!"))
+    msgbox(format("Isn't it amazing to be up here on these mounds??\pI was so excited to be up here, that I dropped one of my Great Balls...\pI've looked everywhere but it's pretty hidden, I'll say. I dropped it somewhere near the hedges to our left..."))
     releaseall
     end
+}
+
+
+script Route2_EventScript_Rival_Upmost{
+	lockall
+	applymovement(5, scare_player_upmost)
+	waitmovement(0)
+	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro)
+	msgbox(format("...\pWHAT?! How could I lose to someone like you??\lWith one of my father's prized Pokémon no less."))
+	applymovement(5, rival_contemplates)
+	waitmovement(0)
+	delay(180)
+	applymovement(5, rival_faces_player_again)
+	waitmovement(0)
+	msgbox(format("...\pit's no big deal...THAT'S RIGHT! No big deal! You've had way more experience with Pokémon than me. You came from Unova, after all.\lYou must know so much already...\pYes, that's why I...lost.\pBut mark my words, {PLAYER}. I won't let this happen again."))
+	applymovement(5, route2_rival_walks_away)
+	waitmovement(0)
+	setvar(VAR_BATTLED_RIVAL_ROUTE_2, 1)
+	setflag(FLAG_RIVAL_ENCOUNTER_ROUTE_2)
+	removeobject(5)
+	releaseall
+	end
+}
+
+script Route2_EventScript_Rival_Downmost{
+	lockall
+	applymovement(5, scare_player_downmost)
+	waitmovement(0)
+	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro)
+	msgbox(format("...\pWHAT?! How could I lose to someone like you??\lWith one of my father's prized Pokémon no less."), MSGBOX_AUTOCLOSE)
+	applymovement(5, rival_contemplates)
+	waitmovement(0)
+	delay(180)
+	applymovement(5, rival_faces_player_again)
+	waitmovement(0)
+	msgbox(format("...\pit's no big deal...\lTHAT'S RIGHT!\l No big deal!\l You've had way more experience with Pokémon than me. You came from Unova, after all.\lYou must know so much already...\pYes, that's why I...lost.\pBut mark my words, {PLAYER}.\pI won't let this happen again."))
+	closemessage
+	applymovement(5, route2_rival_walks_away)
+	waitmovement(0)
+	setvar(VAR_BATTLED_RIVAL_ROUTE_2, 1)
+	setflag(FLAG_RIVAL_ENCOUNTER_ROUTE_2)
+	removeobject(5)
+	releaseall
+	end
+}
+
+movement scare_player_upmost {
+	walk_fast_down * 2
+	walk_fast_left
+}
+
+movement scare_player_downmost {
+	walk_fast_down * 2
+	walk_fast_left
+}
+
+movement rival_contemplates {
+	face_right
+	emote_exclamation_mark
+}
+
+movement rival_faces_player_again {
+	face_player
+}
+
+movement route2_rival_walks_away {
+	walk_right * 9
+}
+
+text route2_rival_intro{
+	format("BOO! Hahaha, did I scare you? Pee yourself a little, did you?\p Haha I expected nothing less from someone like you!\lLet's see if you're just as weak as you seem!")
+}
+
+text route2_rival_outro{
+	format("My strong Pokémon wasn't good enough?!")
 }

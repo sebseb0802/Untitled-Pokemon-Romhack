@@ -16,7 +16,7 @@ script KazaniPass_EventScript_Camper2{
 }
 
 text camper2_intro{
-    "On your way to Satatsu City? I'll beat you there!"
+    "On your way to Satatsu Town? I'll beat you there!"
 }
 
 text camper2_outro{

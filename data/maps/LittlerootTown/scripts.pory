@@ -986,7 +986,7 @@ script LatilynTown_EventScript_SeeRival_Upmost{
 	lock
 	applymovement(1, rival_walk_to_player_upmost)
 	waitmovement(0)
-	msgbox(format("Well, well...\pIf it isn't the new kid! I'm your neighbour, Aris, in case you cared.\lGoing over to get your Pokémon? Haha, loser! Guess who already has their's?\p That's right, me.\p My dad catches loads of strong and powerful Pokémon so I don't need some weak one from Prof. Spruce.\pIf you want to know, I'll be heading to Satatsu City to get my first gym badge.\pThat's right! I'm going to become the strongest trainer ever...something that you'll never even come close to!\pHahaha, see ya round chump!"))
+	msgbox(format("Well, well...\pIf it isn't the new kid! I'm your neighbour, Aris, in case you cared.\lGoing over to get your Pokémon? Haha, loser! Guess who already has their's?\p That's right, me.\p My dad catches loads of strong and powerful Pokémon so I don't need some weak one from Prof. Spruce.\pIf you want to know, I'll be heading to Satatsu Town to get my first gym badge.\pThat's right! I'm going to become the strongest trainer ever...something that you'll never even come close to!\pHahaha, see ya round chump!"))
 	applymovement(1, rival_walk_away)
 	waitmovement(0)
 	setflag(FLAG_SEEN_RIVAL_FOR_FIRST_TIME)
@@ -1005,7 +1005,7 @@ script LatilynTown_EventScript_SeeRival_Downmost{
 	lock
 	applymovement(1, rival_walk_to_player_downmost)
 	waitmovement(0)
-	msgbox(format("Well, well...\pIf it isn't the new kid! I'm your neighbour, Aris, in case you cared.\lGoing over to get your Pokémon? Haha, loser!\pGuess who already has their's? That's right, me.\p My dad catches loads of strong and powerful Pokémon so I don't need some weak one from Prof. Spruce.\pIf you want to know, I'll be heading to Satatsu City to get my first gym badge.\pThat's right! I'm going to become the strongest trainer ever...something that you'll never even come close to!\pHahaha, see ya round chump!"))
+	msgbox(format("Well, well...\pIf it isn't the new kid! I'm your neighbour, Aris, in case you cared.\lGoing over to get your Pokémon? Haha, loser!\pGuess who already has their's? That's right, me.\p My dad catches loads of strong and powerful Pokémon so I don't need some weak one from Prof. Spruce.\pIf you want to know, I'll be heading to Satatsu Town to get my first gym badge.\pThat's right! I'm going to become the strongest trainer ever...something that you'll never even come close to!\pHahaha, see ya round chump!"))
 	applymovement(1, rival_walk_away)
 	waitmovement(0)
 	setflag(FLAG_SEEN_RIVAL_FOR_FIRST_TIME)
@@ -1020,7 +1020,7 @@ movement rival_walk_to_player_downmost {
 }
 
 movement rival_walk_away {
-	walk_right * 6
+	walk_right * 8
 }
 
 
