@@ -3030,4 +3030,8 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+extern const u8 gText_Starter1[];
+extern const u8 gText_Starter2[];
+extern const u8 gText_Starter3[];
+
 #endif // GUARD_STRINGS_H

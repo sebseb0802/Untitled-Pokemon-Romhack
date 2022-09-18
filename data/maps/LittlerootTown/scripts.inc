@@ -1,4 +1,3 @@
-.set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
@@ -43,7 +42,6 @@ LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
-	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
@@ -77,17 +75,6 @@ LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
 
 LittlerootTown_EventScript_MoveMomToMaysDoor::
 	setobjectxyperm LOCALID_MOM, 14, 8
-	return
-
-LittlerootTown_EventScript_SetTwinPos::
-	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_EventScript_SetTwinGuardingRoutePos
-	setobjectxyperm LOCALID_TWIN, 10, 1
-	setobjectmovementtype LOCALID_TWIN, MOVEMENT_TYPE_FACE_UP
-	return
-
-LittlerootTown_EventScript_SetTwinGuardingRoutePos::
-	setobjectxyperm LOCALID_TWIN, 7, 2
-	setobjectmovementtype LOCALID_TWIN, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
@@ -259,18 +246,7 @@ LittlerootTown_EventScript_Twin::
 	faceplayer
 	goto_if_set FLAG_ADVENTURE_STARTED, LittlerootTown_EventScript_GoodLuck
 	goto_if_set FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_YouSavedBirch
-	goto_if_ne VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_EventScript_GoSaveBirch
 	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
-	release
-	end
-
-LittlerootTown_EventScript_GoSaveBirch::
-	special GetPlayerBigGuyGirlString
-	msgbox LittlerootTown_Text_CanYouGoSeeWhatsHappening, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_TWIN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	setvar VAR_LITTLEROOT_TOWN_STATE, 2
 	release
 	end
 
@@ -284,26 +260,6 @@ LittlerootTown_EventScript_GoodLuck::
 	msgbox LittlerootTown_Text_GoodLuckCatchingPokemon, MSGBOX_DEFAULT
 	release
 	end
-
-LittlerootTown_EventScript_NeedPokemonTriggerLeft::
-	lockall
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinApproachPlayerLeft
-	waitmovement 0
-	call LittlerootTown_EventScript_DangerousWithoutPokemon
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinReturnLeft
-	waitmovement 0
-	releaseall
-	end
-
-LittlerootTown_EventScript_DangerousWithoutPokemon::
-	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinPushPlayerFromRoute
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PushPlayerBackFromRoute
-	waitmovement 0
-	msgbox LittlerootTown_Text_DangerousIfYouDontHavePokemon, MSGBOX_DEFAULT
-	closemessage
-	return
 
 LittlerootTown_Movement_TwinApproachPlayerLeft:
 	face_right
@@ -343,16 +299,6 @@ LittlerootTown_Movement_PushPlayerBackFromRoute:
 	unlock_facing_direction
 	step_end
 
-LittlerootTown_EventScript_NeedPokemonTriggerRight::
-	lockall
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinApproachPlayerRight
-	waitmovement 0
-	call LittlerootTown_EventScript_DangerousWithoutPokemon
-	applymovement LOCALID_TWIN, LittlerootTown_Movement_TwinReturnRight
-	waitmovement 0
-	releaseall
-	end
-
 LittlerootTown_Movement_TwinApproachPlayerRight:
 	face_right
 	delay_8
@@ -376,21 +322,6 @@ LittlerootTown_Movement_TwinReturnRight:
 	walk_left
 	walk_in_place_faster_down
 	step_end
-
-LittlerootTown_EventScript_GoSaveBirchTrigger::
-	lockall
-	applymovement LOCALID_TWIN, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	special GetPlayerBigGuyGirlString
-	msgbox LittlerootTown_Text_CanYouGoSeeWhatsHappening, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_TWIN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	setvar VAR_LITTLEROOT_TOWN_STATE, 2
-	releaseall
-	end
 
 LittlerootTown_EventScript_TownSign::
 	msgbox LittlerootTown_Text_TownSign, MSGBOX_SIGN
@@ -1019,3 +950,161 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LatilynTown_EventScript_PlayerHouseSign::
+	lockall
+	msgbox LatilynTown_EventScript_PlayerHouseSign_Text_0
+	releaseall
+	return
+
+
+LatilynTown_EventScript_LabSign::
+	lock
+	msgbox LatilynTown_EventScript_LabSign_Text_0
+	release
+	return
+
+
+LatilynTown_EventScript_NoStarter::
+	lock
+	msgbox LatilynTown_EventScript_NoStarter_Text_0
+	applymovement OBJ_EVENT_ID_PLAYER, moveBack
+	waitmovement 0
+	release
+	end
+
+
+moveBack:
+	walk_down
+	step_end
+
+LatilynTown_EventScript_SeeRival_Upmost::
+	lock
+	applymovement 1, rival_walk_to_player_upmost
+	waitmovement 0
+	msgbox LatilynTown_EventScript_SeeRival_Upmost_Text_0
+	applymovement 1, rival_walk_away
+	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
+	setvar VAR_SEEN_RIVAL_FOR_FIRST_TIME, 1
+	removeobject 1
+	release
+	end
+
+
+rival_walk_to_player_upmost:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LatilynTown_EventScript_SeeRival_Downmost::
+	lock
+	applymovement 1, rival_walk_to_player_downmost
+	waitmovement 0
+	msgbox LatilynTown_EventScript_SeeRival_Downmost_Text_0
+	applymovement 1, rival_walk_away
+	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
+	setvar VAR_SEEN_RIVAL_FOR_FIRST_TIME, 1
+	removeobject 1
+	release
+	end
+
+
+rival_walk_to_player_downmost:
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+rival_walk_away:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+LatilynTown_EventScript_OldLady::
+	lock
+	faceplayer
+	msgbox LatilynTown_EventScript_OldLady_Text_0
+	release
+	end
+
+
+LatilynTown_EventScript_ScienceIsAmazing::
+	lock
+	faceplayer
+	msgbox LatilynTown_EventScript_ScienceIsAmazing_Text_0
+	release
+	end
+
+
+LatilynTown_EventScript_RivalHouseSign::
+	lock
+	msgbox LatilynTown_EventScript_RivalHouseSign_Text_0
+	release
+	end
+
+
+LatilynTown_EventScript_PlayerHouseSign_Text_0:
+	.string "{PLAYER}'s House$"
+
+LatilynTown_EventScript_LabSign_Text_0:
+	.string "Prof. Spruce's Lab$"
+
+LatilynTown_EventScript_NoStarter_Text_0:
+	.string "I should probably head to the lab\n"
+	.string "first...$"
+
+LatilynTown_EventScript_SeeRival_Upmost_Text_0:
+	.string "Well, well...\p"
+	.string "If it isn't the new kid! I'm your\n"
+	.string "neighbour, Aris, in case you cared.\l"
+	.string "Going over to get your Pokémon? Haha,\l"
+	.string "loser! Guess who already has their's?\p"
+	.string "That's right, me.\p"
+	.string "My dad catches loads of strong and\n"
+	.string "powerful Pokémon so I don't need some\l"
+	.string "weak one from Prof. Spruce.\p"
+	.string "If you want to know, I'll be heading to\n"
+	.string "Satatsu City to get my first gym badge.\p"
+	.string "That's right! I'm going to become the\n"
+	.string "strongest trainer ever...something\l"
+	.string "that you'll never even come close to!\p"
+	.string "Hahaha, see ya round chump!$"
+
+LatilynTown_EventScript_SeeRival_Downmost_Text_0:
+	.string "Well, well...\p"
+	.string "If it isn't the new kid! I'm your\n"
+	.string "neighbour, Aris, in case you cared.\l"
+	.string "Going over to get your Pokémon? Haha,\l"
+	.string "loser!\p"
+	.string "Guess who already has their's? That's\n"
+	.string "right, me.\p"
+	.string "My dad catches loads of strong and\n"
+	.string "powerful Pokémon so I don't need some\l"
+	.string "weak one from Prof. Spruce.\p"
+	.string "If you want to know, I'll be heading to\n"
+	.string "Satatsu City to get my first gym badge.\p"
+	.string "That's right! I'm going to become the\n"
+	.string "strongest trainer ever...something\l"
+	.string "that you'll never even come close to!\p"
+	.string "Hahaha, see ya round chump!$"
+
+LatilynTown_EventScript_OldLady_Text_0:
+	.string "You kids these days are lucky, you know.\p"
+	.string "Back in my day, we didn't have Poké Balls\n"
+	.string "yet so Pokémon had to follow behind us\l"
+	.string "instead.\p"
+	.string "They would sometimes even get lost!$"
+
+LatilynTown_EventScript_ScienceIsAmazing_Text_0:
+	.string "The power of science is amazing!\p"
+	.string "Now you can emulate ROMs (like this one)\n"
+	.string "on a computer without needing a\l"
+	.string "physical copy of the game!$"
+
+LatilynTown_EventScript_RivalHouseSign_Text_0:
+	.string "Aris' House$"

@@ -107,3 +107,57 @@ Route102_Text_RouteSignOldale:
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+Route2_EventScript_Lass2::
+	trainerbattle_single TRAINER_ROUTE_2_LASS_2, lass2_intro, lass2_outro
+	return
+
+
+Route2_EventScript_Youngster3::
+	trainerbattle_single TRAINER_ROUTE_2_YOUNGSTER_3, youngster3_intro, youngster3_outro
+	return
+
+
+Route2_EventScript_Pokeball1::
+	removeobject 3
+	giveitem ITEM_POTION
+	closemessage
+	return
+
+
+Route2_EventScript_Signpost::
+	lock
+	msgbox Route2_EventScript_Signpost_Text_0
+	closemessage
+	release
+	end
+
+
+Route2_EventScript_OldMan::
+	lockall
+	faceplayer
+	msgbox Route2_EventScript_OldMan_Text_0
+	releaseall
+	end
+
+
+Route2_EventScript_Signpost_Text_0:
+	.string "{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu City,\l{DOWN_ARROW}Route 10$"
+
+Route2_EventScript_OldMan_Text_0:
+	.string "Isn't it amazing to be up here on these\n"
+	.string "mounds??\p"
+	.string "And the bridges that connect them are\n"
+	.string "just the cherry on top!$"
+
+lass2_intro::
+	.string "Now where are you off to?$"
+
+lass2_outro::
+	.string "Too strong!!$"
+
+youngster3_intro::
+	.string "You look weak enought to me!$"
+
+youngster3_outro::
+	.string "Huh?! I was weaker?!$"

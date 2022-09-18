@@ -1,4 +1,4 @@
-.set LOCALID_BIRCH, 2
+    .set LOCALID_BIRCH, 2
 .set LOCALID_ZIGZAGOON, 4
 
 Route101_MapScripts::
@@ -300,3 +300,49 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route1_EventScript_Youngster1::
+	trainerbattle_single TRAINER_ROUTE_1_YOUNGSTER_1, youngster1_intro, youngster1_outro
+	return
+
+
+Route1_EventScript_Lass1::
+	trainerbattle_single TRAINER_ROUTE_1_LASS_1, lass1_intro, lass1_outro
+	return
+
+
+Route1_EventScript_Youngster2::
+	trainerbattle_single TRAINER_ROUTE_1_YOUNGSTER_2, youngster2_intro, youngster2_outro
+	return
+
+
+Route1_EventScript_Pokeball1::
+	removeobject 4
+	giveitem ITEM_POTION
+	closemessage
+	return
+
+
+Route1_EventScript_Pokeball2::
+	removeobject 5
+	giveitem ITEM_POKE_BALL
+	closemessage
+	return
+
+
+youngster1_intro::
+	.string "Hey you! Battle me!$"
+
+youngster1_outro::
+	.string "Pff... doesn't count!$"
+
+lass1_intro::
+	.string "Wanna see my cool and cute Pokémon?$"
+
+lass1_outro::
+	.string "Not cool enough...$"
+
+youngster2_intro::
+	.string "Get ready to get crushed!$"
+
+youngster2_outro::
+	.string "Aww man... I got crushed instead!$"

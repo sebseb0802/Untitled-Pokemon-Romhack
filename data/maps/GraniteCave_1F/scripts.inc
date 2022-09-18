@@ -37,3 +37,21 @@ GraniteCave_1F_Text_ExplainFlash:
 	.string "But, to use it, you need the GYM BADGE\n"
 	.string "from DEWFORD's POKéMON GYM.$"
 
+KazaniPass_EventScript_Camper1::
+	trainerbattle_single TRAINER_KAZANI_PASS_CAMPER_1, camper1_intro, camper1_outro
+	return
+
+
+KazaniPass_EventScript_Pokeball1::
+	removeobject 2
+	giveitem ITEM_ORAN_BERRY
+	closemessage
+	return
+
+
+camper1_intro::
+	.string "Are you ready for me and my two\n"
+	.string "Zubats??$"
+
+camper1_outro::
+	.string "Hey! My zubats are still cool...$"

@@ -1,3 +1,39 @@
+LatilynTown_EventScript_StartAdventure::
+	lock
+	msgbox LatilynTown_EventScript_StartAdventure_Text_0
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, move_player
+	waitmovement 0
+	applymovement 1, mum_face_player
+	waitmovement 0
+	msgbox LatilynTown_EventScript_StartAdventure_Text_1
+	msgbox LatilynTown_EventScript_StartAdventure_Text_2
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LatilynTown_EventScript_StartAdventure_Text_3
+	waitfanfare
+	setflag FLAG_SYS_POKENAV_GET
+	msgbox LatilynTown_EventScript_StartAdventure_Text_4
+	closemessage
+	setvar VAR_ADVENTURE_STARTED, 1
+	release
+	end
+
+
+move_player:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_down
+	step_end
+
+mum_face_player:
+	face_player
+	step_end
+
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4
 .set LOCALID_RIVAL, 7
@@ -438,3 +474,36 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
 	.string "There are still unknown POKéMON.$"
+
+LatilynTown_EventScript_StartAdventure_Text_0:
+	.string "Hey {PLAYER}!$"
+
+LatilynTown_EventScript_StartAdventure_Text_1:
+	.string "How did you sleep?\p"
+	.string "I know it's only been a few weeks, but\n"
+	.string "Professor Spruce asked me to ask you\l"
+	.string "if you wanted to conduct some\l"
+	.string "research on behalf of him in Menai.\l"
+	.string "How does that sound? A real adventure,\l"
+	.string "right?\p"
+	.string "Don't forget that you'll have Pokémon\n"
+	.string "with you always, so don't worry about\l"
+	.string "being lonely! Speaking of which... the\l"
+	.string "Professor told me about a little gift\l"
+	.string "that he's planning on giving you when\l"
+	.string "you arrive at the lab. Better get going\l"
+	.string "then!$"
+
+LatilynTown_EventScript_StartAdventure_Text_2:
+	.string "...Oh! I almost forgot!\p"
+	.string "Here's a Pokénav!$"
+
+LatilynTown_EventScript_StartAdventure_Text_3:
+	.string "Obtained a Pokénav!$"
+
+LatilynTown_EventScript_StartAdventure_Text_4:
+	.string "You can do all sorts of nifty things\n"
+	.string "with it! I'm sure you'll work it out.\l"
+	.string "Don't forget to visit sometimes to tell\l"
+	.string "me all about your adventures! Have fun\l"
+	.string "and safe travels, sweetie!$"

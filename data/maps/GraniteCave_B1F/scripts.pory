@@ -1,0 +1,60 @@
+raw `
+GraniteCave_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveHole_CheckFallDownHole
+	map_script MAP_SCRIPT_ON_TRANSITION, CaveHole_FixCrackedGround
+	map_script MAP_SCRIPT_ON_RESUME, GraniteCave_B1F_SetHoleWarp
+	.byte 0
+
+GraniteCave_B1F_SetHoleWarp:
+	setstepcallback STEP_CB_CRACKED_FLOOR
+	setholewarp MAP_GRANITE_CAVE_B2F
+	end
+`
+
+script KazaniPass_EventScript_Camper2{
+    trainerbattle_single(TRAINER_KAZANI_PASS_CAMPER_2, camper2_intro, camper2_outro)
+}
+
+text camper2_intro{
+    "On your way to Satatsu City? I'll beat you there!"
+}
+
+text camper2_outro{
+    "I guess you'll beat me there..."
+}
+
+
+script KazaniPass_EventScript_Camper3{
+    trainerbattle_single(TRAINER_KAZANI_PASS_CAMPER_3, camper3_intro, camper3_outro)
+}
+
+text camper3_intro{
+    format("This cave is pretty big! Wanna see what I caught on the way here?")
+}
+
+text camper3_outro{
+    format("Where did you catch those Pokémon?!")
+}
+
+
+script KazaniPass_EventScript_Give_Return{
+    lock
+    faceplayer
+    if (!flag(FLAG_RECEIVED_TM_RETURN)){
+        msgbox(format("Ever wondered if you could see how much your own Pokémon are affectionate towards you?\p Well, you can!\pTake this TM!"))
+        giveitem(ITEM_TM27_RETURN)
+        msgbox(format("Use the power of friendship to crush your opponents! How sweet!"))
+        setflag(FLAG_RECEIVED_TM_RETURN)
+    }else {
+        msgbox(format("Use the power of friendship to crush your opponents! How sweet!"))
+    }
+    release
+    end
+}
+
+
+script KazaniPass_EventScript_Pokeball2{
+    removeobject(2)
+    giveitem(ITEM_ESCAPE_ROPE)
+	closemessage
+}

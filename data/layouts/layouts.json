@@ -94,9 +94,9 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 40,
+      "height": 24,
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
@@ -104,9 +104,9 @@
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
@@ -164,9 +164,9 @@
     {
       "id": "LAYOUT_ROUTE101",
       "name": "Route101_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 26,
+      "height": 42,
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route101/border.bin",
       "blockdata_filepath": "data/layouts/Route101/map.bin"
@@ -176,7 +176,7 @@
       "name": "Route102_Layout",
       "width": 50,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route102/border.bin",
       "blockdata_filepath": "data/layouts/Route102/map.bin"
@@ -306,8 +306,8 @@
       "name": "Route115_Layout",
       "width": 40,
       "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fallarbor",
+      "primary_tileset": "gTileset_newerGeneral",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route115/border.bin",
       "blockdata_filepath": "data/layouts/Route115/map.bin"
     },
@@ -1314,8 +1314,8 @@
     {
       "id": "LAYOUT_GRANITE_CAVE_1F",
       "name": "GraniteCave_1F_Layout",
-      "width": 42,
-      "height": 15,
+      "width": 20,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
@@ -1324,8 +1324,8 @@
     {
       "id": "LAYOUT_GRANITE_CAVE_B1F",
       "name": "GraniteCave_B1F_Layout",
-      "width": 32,
-      "height": 26,
+      "width": 47,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GraniteCave_B1F/border.bin",

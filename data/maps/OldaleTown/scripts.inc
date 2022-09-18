@@ -1,4 +1,3 @@
-.set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3
 .set LOCALID_RIVAL, 4
 
@@ -10,7 +9,6 @@ OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_OLDALE_TOWN
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
-	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
 	end
 
@@ -22,11 +20,6 @@ OldaleTown_EventScript_SetOldaleState::
 OldaleTown_EventScript_BlockWestEntrance::
 	setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 11
 	setobjectmovementtype LOCALID_FOOTPRINTS_MAN, MOVEMENT_TYPE_FACE_LEFT
-	return
-
-OldaleTown_EventScript_MoveMartEmployee::
-	setobjectxyperm LOCALID_MART_EMPLOYEE, 13, 14
-	setobjectmovementtype LOCALID_MART_EMPLOYEE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 OldaleTown_EventScript_TownSign::
@@ -46,31 +39,6 @@ OldaleTown_EventScript_MartEmployee::
 	playbgm MUS_FOLLOW_ME, FALSE
 	msgbox OldaleTown_Text_IWorkAtPokemonMart, MSGBOX_DEFAULT
 	closemessage
-	switch VAR_FACING
-	case DIR_SOUTH, OldaleTown_EventScript_GoToMartSouth
-	case DIR_NORTH, OldaleTown_EventScript_GoToMartNorth
-	case DIR_EAST, OldaleTown_EventScript_GoToMartEast
-	end
-
-OldaleTown_EventScript_GoToMartSouth::
-	applymovement LOCALID_MART_EMPLOYEE, OldaleTown_Movement_EmployeeSouth
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_PlayerSouth
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
-	end
-
-OldaleTown_EventScript_GoToMartNorth::
-	applymovement LOCALID_MART_EMPLOYEE, OldaleTown_Movement_EmployeeNorth
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_PlayerNorth
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
-	end
-
-OldaleTown_EventScript_GoToMartEast::
-	applymovement OBJ_EVENT_ID_PLAYER, OldaleTown_Movement_PlayerEast
-	applymovement LOCALID_MART_EMPLOYEE, OldaleTown_Movement_EmployeeEast
-	waitmovement 0
-	goto OldaleTown_EventScript_ExplainPokemonMart
 	end
 
 OldaleTown_EventScript_ExplainPokemonMart::
@@ -356,7 +324,7 @@ OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a POKéMON MART.\n"
 	.string "Just look for our blue roof.\p"
 	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching POKéMON.\p"
+	.string "POKéBALLS for catching POKéMON.\p"
 	.string "Here, I'd like you to have this as\n"
 	.string "a promotional item.$"
 
@@ -399,3 +367,27 @@ OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+KazaniVillage_EventScript_Block_Cave_Man::
+	goto_if_unset FLAG_KAZANI_VILLAGE_GIVEN_LETTER, KazaniVillage_EventScript_Block_Cave_Man_1
+	return
+
+KazaniVillage_EventScript_Block_Cave_Man_1:
+	lock
+	faceplayer
+	msgbox KazaniVillage_EventScript_Block_Cave_Man_Text_0
+	closemessage
+	release
+	end
+
+
+KazaniVillage_EventScript_Pokeball1::
+	removeobject 2
+	giveitem ITEM_REPEL
+	closemessage
+	return
+
+
+KazaniVillage_EventScript_Block_Cave_Man_Text_0:
+	.string "I heard the chief was looking for you.\n"
+	.string "Might want to have a look at the house\l"
+	.string "on the very west side of the village.$"

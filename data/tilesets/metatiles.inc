@@ -557,3 +557,18 @@ gMetatiles_UnionRoom::
 	.align 1
 gMetatileAttributes_UnionRoom::
 	.incbin "data/tilesets/secondary/union_room/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_newGeneral::
+	.incbin "data/tilesets/primary/newgeneral/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_newGeneral::
+	.incbin "data/tilesets/primary/newgeneral/metatile_attributes.bin"
+	.align 1
+gMetatiles_newerGeneral::
+	.incbin "data/tilesets/primary/newergeneral/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_newerGeneral::
+	.incbin "data/tilesets/primary/newergeneral/metatile_attributes.bin"

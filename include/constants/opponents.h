@@ -3,15 +3,15 @@
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
+#define TRAINER_ROUTE_1_YOUNGSTER_1           2
+#define TRAINER_ROUTE_1_LASS_1                3
+#define TRAINER_ROUTE_1_YOUNGSTER_2           4
+#define TRAINER_KAZANI_PASS_CAMPER_1          5
+#define TRAINER_KAZANI_PASS_CAMPER_2          6
+#define TRAINER_KAZANI_PASS_CAMPER_3          7
+#define TRAINER_ROUTE_2_LASS_2                8
+#define TRAINER_ROUTE_2_YOUNGSTER_3           9
+#define TRAINER_ROUTE_2_RIVAL                10
 #define TRAINER_MARCEL                       11
 #define TRAINER_ALBERTO                      12
 #define TRAINER_ED                           13

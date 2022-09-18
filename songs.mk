@@ -585,6 +585,15 @@ $(MID_SUBDIR)/mus_encounter_swimmer.s: %.s: %.mid
 $(MID_SUBDIR)/mus_encounter_girl.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G027 -V080
 
+$(MID_SUBDIR)/mus_route13.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
+
+$(MID_SUBDIR)/mus_twinleaf.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
+
+$(MID_SUBDIR)/mus_vs_silver.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V100
+
 $(MID_SUBDIR)/mus_intro_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G088 -V088
 

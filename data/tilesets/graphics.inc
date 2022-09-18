@@ -1729,3 +1729,43 @@ gTilesetPalettes_UnionRoom::
 	.align 2
 gTilesetTiles_UnionRoom::
 	.incbin "data/tilesets/secondary/union_room/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_newGeneral::
+	.incbin "data/tilesets/primary/newgeneral/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/newgeneral/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_newGeneral::
+	.incbin "data/tilesets/primary/newgeneral/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_newerGeneral::
+	.incbin "data/tilesets/primary/newergeneral/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/newergeneral/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_newerGeneral::
+	.incbin "data/tilesets/primary/newergeneral/tiles.4bpp.lz"

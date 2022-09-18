@@ -1,3 +1,9 @@
+LatilynTown_EventScript_Give_Running_Shoes::
+	setflag FLAG_SYS_B_DASH
+	setvar VAR_RECEIVED_RUNNING_SHOES, 1
+	end
+
+
 .set LOCALID_RIVAL, 1
 
 LittlerootTown_BrendansHouse_2F_MapScripts::
