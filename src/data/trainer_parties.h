@@ -139,21 +139,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_BlackBelt2[] 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_Mach[] = {
+static const struct TrainerMonItemCustomMoves sParty_SatatsuGym_Mach[] = {
     {
     .iv = 10,
     .lvl = 10,
     .species = SPECIES_MANKEY,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_LEER, MOVE_SCRATCH, MOVE_BULK_UP}
     },
     {
     .iv = 10,
     .lvl = 11,
     .species = SPECIES_TYROGUE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_COUNTER, MOVE_MACH_PUNCH, MOVE_BULK_UP}
     },
     {
     .iv = 10,
     .lvl = 13,
     .species = SPECIES_RIOLU,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_QUICK_ATTACK, MOVE_ENDURE, MOVE_LOW_KICK, MOVE_BULK_UP}
     }
 };
 

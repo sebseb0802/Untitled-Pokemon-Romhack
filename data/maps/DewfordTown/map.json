@@ -2,7 +2,7 @@
   "id": "MAP_DEWFORD_TOWN",
   "name": "DewfordTown",
   "layout": "LAYOUT_DEWFORD_TOWN",
-  "music": "MUS_DEWFORD",
+  "music": "MUS_HG_CHERRYGROVE",
   "region_map_section": "MAPSEC_SATATSU_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -20,7 +20,19 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
+      "x": 19,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_MET_EGOR"
+    }
   ],
   "warp_events": [
     {
@@ -60,7 +72,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_GOTTEN_FIRST_BADGE",
+      "var_value": "0",
+      "script": "DewfordTown_EventScript_MysteryMan"
+    }
   ],
   "bg_events": [
 

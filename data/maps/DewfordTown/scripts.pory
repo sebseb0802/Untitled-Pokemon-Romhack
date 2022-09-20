@@ -1,58 +1,54 @@
-DewfordTown_MapScripts::
-	.byte 0
+mapscripts DewfordTown_MapScripts {
 
+}
 
-DewfordTown_EventScript_MysteryMan::
-	lock
-	applymovement 1, mysteryman_surprised
-	waitmovement 0
-	applymovement 1, mysteryman_walks_to_player
-	msgbox DewfordTown_EventScript_MysteryMan_Text_0, MSGBOX_AUTOCLOSE
-	applymovement 1, mysteryman_paces
-	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_1
-	applymovement 1, mysteryman_surprised
-	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_2
-	applymovement 1, mysteryman_paces
-	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_3
-	applymovement 1, mysteryman_walks_away
-	waitmovement 0
-	setvar VAR_GOTTEN_FIRST_BADGE, 1
-	setflag FLAG_MET_EGOR
-	release
-	end
+script DewfordTown_EventScript_MysteryMan {
+    lock
+    applymovement(1, mysteryman_surprised)
+    waitmovement(0)
+    applymovement(1, mysteryman_walks_to_player)
+    msgbox(format("So you must be, {PLAYER}.\lWho am I?\lWell that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
+    applymovement(1, mysteryman_paces)
+    waitmovement(0)
+    msgbox(format("You see, the thing is that the aforementioned letter contains some very valuable information about the doings and whereabouts of a certa..."))
+    applymovement(1, mysteryman_surprised)
+    waitmovement(0)
+    msgbox(format("Perhaps I've said too much already...\pThe point is that I need to find out as much as I can about that letter before things get...\lbad...\pDid you happen to take a glimpse at the letter?\p...\pNo? Alright then...\pWhat about the Chief's reaction?\p...uh-huh, OK surprised and slightly worried. I see, I see."))
+    applymovement(1, mysteryman_paces)
+    waitmovement(0)
+    msgbox(format("Well, this has been most helpful, {PLAYER}. Thank you.\pBefore we part ways, I must advise you to keep an eye out for suspicious activity. Something bad is happening in Menai at the moment...something that at this point in time we know very little about...\pI'll be in touch, {PLAYER}."))
+    applymovement(1, mysteryman_walks_away)
+    waitmovement(0)
+    setvar(VAR_GOTTEN_FIRST_BADGE, 1)
+    setflag(FLAG_MET_EGOR)
+	removeobject(1)
+    release
+    end
+}
 
+movement mysteryman_surprised {
+    emote_exclamation_mark
+}
 
-mysteryman_surprised:
-	emote_exclamation_mark
-	step_end
+movement mysteryman_walks_to_player {
+    walk_fast_up
+    walk_fast_right
+    face_player
+}
 
-mysteryman_walks_to_player:
-	walk_fast_up
-	walk_fast_right
-	face_player
-	step_end
+movement mysteryman_paces {
+    walk_left
+    walk_right * 2
+    walk_left
+    face_player
+}
 
-mysteryman_paces:
-	walk_left
-	walk_right
-	walk_right
-	walk_left
-	face_player
-	step_end
-
-mysteryman_walks_away:
+movement mysteryman_walks_away {
 	walk_fast_left
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	step_end
+    walk_fast_down * 6
+}
 
+raw `
 @@ -1,802 +1,116 @@
 @ Sailing to and from Dewford uses local IDs from different maps
 @ e.g. Route 104's sail to Dewford script references local IDs from Dewford's map
@@ -839,46 +835,4 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
-
-DewfordTown_EventScript_MysteryMan_Text_0:
-	.string "So you must be, {PLAYER}.\l"
-	.string "Who am I?\l"
-	.string "Well that is none of your concern for\l"
-	.string "the moment. For now, you can call me\l"
-	.string "Egor.\p"
-	.string "I am here to talk to you about the\n"
-	.string "letter that Professor Spruce asked\l"
-	.string "you to deliver to Chief Mach of Kazani\l"
-	.string "Village.\l"
-	.string "Ring any bells?$"
-
-DewfordTown_EventScript_MysteryMan_Text_1:
-	.string "You see, the thing is that the\n"
-	.string "aforementioned letter contains some\l"
-	.string "very valuable information about the\l"
-	.string "doings and whereabouts of a certa...$"
-
-DewfordTown_EventScript_MysteryMan_Text_2:
-	.string "Perhaps I've said too much already...\p"
-	.string "The point is that I need to find out as\n"
-	.string "much as I can about that letter before\l"
-	.string "things get...\l"
-	.string "bad...\p"
-	.string "Did you happen to take a glimpse at the\n"
-	.string "letter?\p"
-	.string "...\p"
-	.string "No? Alright then...\p"
-	.string "What about the Chief's reaction?\p"
-	.string "...uh-huh, OK surprised and slightly\n"
-	.string "worried. I see, I see.$"
-
-DewfordTown_EventScript_MysteryMan_Text_3:
-	.string "Well, this has been most helpful,\n"
-	.string "{PLAYER}. Thank you.\p"
-	.string "Before we part ways, I must advise you\n"
-	.string "to keep an eye out for suspicious\l"
-	.string "activity. Something bad is happening in\l"
-	.string "Menai at the moment...something that\l"
-	.string "at this point in time we know very\l"
-	.string "little about...\p"
-	.string "I'll be in touch, {PLAYER}.$"
+`

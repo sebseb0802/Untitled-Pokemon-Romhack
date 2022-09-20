@@ -165,7 +165,19 @@ script Route2_EventScript_Rival_Upmost{
 	lockall
 	applymovement(5, scare_player_upmost)
 	waitmovement(0)
-	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro)
+	playbgm(MUS_RG_ENCOUNTER_RIVAL, TRUE)
+	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC)
+}
+
+script Route2_EventScript_Rival_Downmost{
+	lockall
+	applymovement(5, scare_player_downmost)
+	waitmovement(0)
+	playbgm(MUS_RG_ENCOUNTER_RIVAL, TRUE)
+	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC)
+}
+
+script Route2_EventScript_Rival_After_Battle{
 	msgbox(format("...\pWHAT?! How could I lose to someone like you??\lWith one of my father's prized Pokémon no less."))
 	applymovement(5, rival_contemplates)
 	waitmovement(0)
@@ -182,35 +194,13 @@ script Route2_EventScript_Rival_Upmost{
 	end
 }
 
-script Route2_EventScript_Rival_Downmost{
-	lockall
-	applymovement(5, scare_player_downmost)
-	waitmovement(0)
-	trainerbattle_single(TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro)
-	msgbox(format("...\pWHAT?! How could I lose to someone like you??\lWith one of my father's prized Pokémon no less."), MSGBOX_AUTOCLOSE)
-	applymovement(5, rival_contemplates)
-	waitmovement(0)
-	delay(180)
-	applymovement(5, rival_faces_player_again)
-	waitmovement(0)
-	msgbox(format("...\pit's no big deal...\lTHAT'S RIGHT!\l No big deal!\l You've had way more experience with Pokémon than me. You came from Unova, after all.\lYou must know so much already...\pYes, that's why I...lost.\pBut mark my words, {PLAYER}.\pI won't let this happen again."))
-	closemessage
-	applymovement(5, route2_rival_walks_away)
-	waitmovement(0)
-	setvar(VAR_BATTLED_RIVAL_ROUTE_2, 1)
-	setflag(FLAG_RIVAL_ENCOUNTER_ROUTE_2)
-	removeobject(5)
-	releaseall
-	end
-}
-
 movement scare_player_upmost {
 	walk_fast_down * 2
 	walk_fast_left
 }
 
 movement scare_player_downmost {
-	walk_fast_down * 2
+	walk_fast_down * 3
 	walk_fast_left
 }
 

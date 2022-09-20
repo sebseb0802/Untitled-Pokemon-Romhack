@@ -1,6 +1,8 @@
 script LatilynTown_EventScript_Give_Running_Shoes{
 	setflag(FLAG_SYS_B_DASH)
+	setflag(FLAG_MET_EGOR)
 	setvar(VAR_RECEIVED_RUNNING_SHOES, 1)
+	setvar(VAR_GOTTEN_FIRST_BADGE, 1)
 	end
 }
 

@@ -7458,9 +7458,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            return MUS_VS_GYM_LEADER;
+            return MUS_HG_VS_GYM_LEADER_KANTO;
         case TRAINER_CLASS_CHAMPION:
-            return MUS_RG_VS_CHAMPION;
+            return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
@@ -7478,7 +7478,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_BROTHER_TRIAD:
-            return MUS_RG_VS_CHAMPION;
+            return MUS_DP_VS_CHAMPION;
         default:
             return MUS_VS_TRAINER;
         }

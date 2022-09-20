@@ -145,36 +145,28 @@ Route2_EventScript_Rival_Upmost::
 	lockall
 	applymovement 5, scare_player_upmost
 	waitmovement 0
-	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro
-	msgbox Route2_EventScript_Rival_Upmost_Text_0
-	applymovement 5, rival_contemplates
-	waitmovement 0
-	delay 180
-	applymovement 5, rival_faces_player_again
-	waitmovement 0
-	msgbox Route2_EventScript_Rival_Upmost_Text_1
-	applymovement 5, route2_rival_walks_away
-	waitmovement 0
-	setvar VAR_BATTLED_RIVAL_ROUTE_2, 1
-	setflag FLAG_RIVAL_ENCOUNTER_ROUTE_2
-	removeobject 5
-	releaseall
-	end
+	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
+	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC
+	return
 
 
 Route2_EventScript_Rival_Downmost::
 	lockall
 	applymovement 5, scare_player_downmost
 	waitmovement 0
-	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro
-	msgbox Route2_EventScript_Rival_Upmost_Text_0, MSGBOX_AUTOCLOSE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
+	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC
+	return
+
+
+Route2_EventScript_Rival_After_Battle::
+	msgbox Route2_EventScript_Rival_After_Battle_Text_0
 	applymovement 5, rival_contemplates
 	waitmovement 0
 	delay 180
 	applymovement 5, rival_faces_player_again
 	waitmovement 0
-	msgbox Route2_EventScript_Rival_Downmost_Text_0
-	closemessage
+	msgbox Route2_EventScript_Rival_After_Battle_Text_1
 	applymovement 5, route2_rival_walks_away
 	waitmovement 0
 	setvar VAR_BATTLED_RIVAL_ROUTE_2, 1
@@ -191,6 +183,7 @@ scare_player_upmost:
 	step_end
 
 scare_player_downmost:
+	walk_fast_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_left
@@ -229,14 +222,14 @@ Route2_EventScript_OldMan_Text_0:
 	.string "hidden, I'll say. I dropped it somewhere\l"
 	.string "near the hedges to our left...$"
 
-Route2_EventScript_Rival_Upmost_Text_0:
+Route2_EventScript_Rival_After_Battle_Text_0:
 	.string "...\p"
 	.string "WHAT?! How could I lose to someone like\n"
 	.string "you??\l"
 	.string "With one of my father's prized Pokémon\l"
 	.string "no less.$"
 
-Route2_EventScript_Rival_Upmost_Text_1:
+Route2_EventScript_Rival_After_Battle_Text_1:
 	.string "...\p"
 	.string "it's no big deal...THAT'S RIGHT! No big\n"
 	.string "deal! You've had way more experience\l"
@@ -246,19 +239,6 @@ Route2_EventScript_Rival_Upmost_Text_1:
 	.string "Yes, that's why I...lost.\p"
 	.string "But mark my words, {PLAYER}. I won't\n"
 	.string "let this happen again.$"
-
-Route2_EventScript_Rival_Downmost_Text_0:
-	.string "...\p"
-	.string "it's no big deal...\l"
-	.string "THAT'S RIGHT!\l"
-	.string "No big deal!\l"
-	.string "You've had way more experience with\l"
-	.string "Pokémon than me. You came from Unova,\l"
-	.string "after all.\l"
-	.string "You must know so much already...\p"
-	.string "Yes, that's why I...lost.\p"
-	.string "But mark my words, {PLAYER}.\p"
-	.string "I won't let this happen again.$"
 
 lass2_intro::
 	.string "Now where are you off to?$"

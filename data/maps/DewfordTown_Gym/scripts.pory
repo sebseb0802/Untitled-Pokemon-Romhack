@@ -1,0 +1,55 @@
+mapscripts DewfordTown_Gym_MapScripts {
+	
+}
+
+script SatatsuGym_EventScript_BlackBelt1 {
+    trainerbattle_single(TRAINER_SATATSU_GYM_BLACK_BELT_1, satatsu_bb1_intro, satatsu_bb1_outro)
+}
+
+text satatsu_bb1_intro {
+    format("My father trained my brother and I well and I'll prove it to you now!")
+}
+
+text satatsu_bb1_outro {
+    format("I respect your strength.")
+}
+
+script SatatsuGym_EventScript_BlackBelt2 {
+    trainerbattle_single(TRAINER_SATATSU_GYM_BLACK_BELT_2, satatsu_bb2_intro, satatsu_bb2_outro)
+}
+
+text satatsu_bb2_intro {
+    format("You made it past my brother? I'll stop you then!")
+}
+
+text satatsu_bb2_outro {
+    format("I wish you luck for your battle ahead.")
+}
+
+script SatatsuGym_EventScript_LeaderMach {
+    trainerbattle_single(TRAINER_SATATSU_GYM_LEADER_MACH, satatsu_mach_intro, satatsu_mach_outro, SatatsuGym_EventScript_LeaderMach_After_Battle, NO_MUSIC)
+}
+
+script SatatsuGym_EventScript_LeaderMach_After_Battle {
+	lockall
+	msgbox(format("Brilliant!\pBoth you and your Pokémon showed excellent determination and passion for our battle just now!\lThose are some excellent qualities for a trainer to have and I can sense that you and your Pokémon will go far.\pAhem...Here's the Counter Badge!"))
+	playfanfare(MUS_HG_OBTAIN_BADGE)
+	msgbox(format("{PLAYER} got the Counter Badge from Mach!"))
+	waitfanfare
+	setflag(FLAG_BADGE01_GET)
+	clearflag(FLAG_MET_EGOR)
+	msgbox(format("Also, take this TM!"))
+	giveitem(ITEM_TM08_BULK_UP)
+	msgbox(format("Bulk Up lets your Pokémon toughen up before taking and/or dealing a hit.\lA very useful move indeed!\pI wish you the best of luck in your future endevours."))
+	setvar(VAR_GOTTEN_FIRST_BADGE, 0)
+	closemessage
+	releaseall
+}
+
+text satatsu_mach_intro {
+    format("Ah, {PLAYER}!\lDid I surprise you? Yes, that's right!\lIt's me, the Chief of Kazani Village!\pI used to do a lot of battling when I was younger but now I limit it just to gym challengers, such as yourself.\pWell then, let's get this battle underway!\lGive it your all, {PLAYER}, and I'll do the same!")
+}
+
+text satatsu_mach_outro {
+    format("Truly remarkable strength.")
+}

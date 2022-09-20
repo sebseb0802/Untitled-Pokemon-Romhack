@@ -2086,10 +2086,10 @@ $(MID_SUBDIR)/mus_hg_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V111
 
 $(MID_SUBDIR)/mus_hg_vs_gym_leader.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V108
+	$(MID) $< $@ -E -R0 -G229 -V115
 
 $(MID_SUBDIR)/mus_hg_vs_rival.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V084
+	$(MID) $< $@ -E -R0 -G229 -V100
 
 $(MID_SUBDIR)/mus_hg_vs_rocket.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V102

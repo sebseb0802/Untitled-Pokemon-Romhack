@@ -793,6 +793,6 @@
 // gTileset_newerGeneral
 #define METATILE_newerGeneral_CaveEntrance_Bottom  0x022
 #define METATILE_newerGeneral_Door_PokeCenter      0x06A
-#define METATILE_newerGeneral_TallGrass            0x003
+#define METATILE_newerGeneral_TallGrass            0x081
 
 #endif // GUARD_METATILE_LABELS_H

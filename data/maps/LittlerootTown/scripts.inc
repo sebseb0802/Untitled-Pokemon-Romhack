@@ -1000,6 +1000,7 @@ rival_walk_to_player_upmost:
 
 LatilynTown_EventScript_SeeRival_Downmost::
 	lock
+	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
 	applymovement 1, rival_walk_to_player_downmost
 	waitmovement 0
 	msgbox LatilynTown_EventScript_SeeRival_Downmost_Text_0
@@ -1095,8 +1096,9 @@ LatilynTown_EventScript_SeeRival_Downmost_Text_0:
 	.string "Satatsu Town to get my first gym\l"
 	.string "badge.\p"
 	.string "That's right! I'm going to become the\n"
-	.string "strongest trainer ever...something\l"
-	.string "that you'll never even come close to!\p"
+	.string "strongest trainer ever...\l"
+	.string "something that you'll never even come\l"
+	.string "close to!\p"
 	.string "Hahaha, see ya round chump!$"
 
 LatilynTown_EventScript_OldLady_Text_0:

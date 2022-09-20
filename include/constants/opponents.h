@@ -13,8 +13,8 @@
 #define TRAINER_ROUTE_2_YOUNGSTER_3           9
 #define TRAINER_ROUTE_2_RIVAL                10
 #define TRAINER_SATATSU_GYM_BLACK_BELT_1     11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
+#define TRAINER_SATATSU_GYM_BLACK_BELT_2     12
+#define TRAINER_SATATSU_GYM_LEADER_MACH      13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
