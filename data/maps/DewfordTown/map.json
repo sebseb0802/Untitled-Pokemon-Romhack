@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_ROUTE102"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE103"
     }
   ],
   "object_events": [
@@ -77,9 +82,45 @@
       "x": 20,
       "y": 6,
       "elevation": 0,
+      "var": "VAR_SATATSU_SPEAK_WITH_EGOR",
+      "var_value": "0",
+      "script": "SatatsuTown_EventScript_MysteryMan"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 9,
+      "elevation": 0,
       "var": "VAR_GOTTEN_FIRST_BADGE",
       "var_value": "0",
-      "script": "DewfordTown_EventScript_MysteryMan"
+      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GOTTEN_FIRST_BADGE",
+      "var_value": "0",
+      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GOTTEN_FIRST_BADGE",
+      "var_value": "0",
+      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_GOTTEN_FIRST_BADGE",
+      "var_value": "0",
+      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
     }
   ],
   "bg_events": [

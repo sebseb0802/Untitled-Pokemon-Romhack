@@ -979,6 +979,7 @@ moveBack:
 
 LatilynTown_EventScript_SeeRival_Upmost::
 	lock
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	applymovement 1, rival_walk_to_player_upmost
 	waitmovement 0
 	msgbox LatilynTown_EventScript_SeeRival_Upmost_Text_0
@@ -1000,7 +1001,7 @@ rival_walk_to_player_upmost:
 
 LatilynTown_EventScript_SeeRival_Downmost::
 	lock
-	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	applymovement 1, rival_walk_to_player_downmost
 	waitmovement 0
 	msgbox LatilynTown_EventScript_SeeRival_Downmost_Text_0

@@ -118,24 +118,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route2_Rival[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_BlackBelt1[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_SatatsuGym_BlackBelt1[] = {
     {
     .iv = 10,
     .lvl = 10,
     .species = SPECIES_MACHOP,
+    .moves = {MOVE_LEER, MOVE_LOW_KICK}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SatatsuGym_BlackBelt2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_SatatsuGym_BlackBelt2[] = {
     {
     .iv = 10,
     .lvl = 9,
     .species = SPECIES_MANKEY,
+    .moves = {MOVE_LEER, MOVE_SCRATCH}
     },
     {
     .iv = 10,
     .lvl = 9,
     .species = SPECIES_MACHOP,
+    .moves = {MOVE_LEER, MOVE_LOW_KICK}
     }
 };
 

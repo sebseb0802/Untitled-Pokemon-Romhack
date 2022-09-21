@@ -114,7 +114,7 @@
     {
       "id": "LAYOUT_DEWFORD_TOWN",
       "name": "DewfordTown_Layout",
-      "width": 30,
+      "width": 40,
       "height": 17,
       "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Dewford",
@@ -184,9 +184,9 @@
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 80,
-      "height": 22,
-      "primary_tileset": "gTileset_General",
+      "width": 100,
+      "height": 30,
+      "primary_tileset": "gTileset_newerGeneral",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"

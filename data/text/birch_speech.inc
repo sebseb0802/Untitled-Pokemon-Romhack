@@ -1,6 +1,6 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of Pokémon!\p"
+	.string "Welcome to the Menai Region!\p"
 	.string "I'm Professor Spruce.\p"
 	.string "$"
 
@@ -43,7 +43,7 @@ gText_Birch_SoItsPlayer::
 gText_Birch_YourePlayer::
 	.string "Ah, okay!\p"
 	.string "You're {PLAYER}{KUN} who's moved to\n"
-	.string "Latilyn all the way from Unova,\l"
+	.string "Latilyn all the way from Unova, "
 	.string "if I'm not mistaken.\p"
 	.string "Quite close to the lab, too!\p"
 	.string "$"
@@ -55,7 +55,6 @@ gText_Birch_AreYouReady::
 	.string "Take courage, and leap into the\n"
 	.string "world of Pokémon where dreams,\l"
 	.string "adventure, and friendships await!\p"
-	.string "Well, I'll be expecting you later\n" 
-	.string "to ask a favour of you.\l"
-	.string "Come see me at the lab.\p"
+	.string "I have a favour to ask of you so\l" 
+	.string "swing by the lab later!\p"
 	.string "$"

@@ -145,7 +145,7 @@ Route2_EventScript_Rival_Upmost::
 	lockall
 	applymovement 5, scare_player_upmost
 	waitmovement 0
-	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC
 	return
 
@@ -154,12 +154,13 @@ Route2_EventScript_Rival_Downmost::
 	lockall
 	applymovement 5, scare_player_downmost
 	waitmovement 0
-	playbgm MUS_RG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	trainerbattle_single TRAINER_ROUTE_2_RIVAL, route2_rival_intro, route2_rival_outro, Route2_EventScript_Rival_After_Battle, NO_MUSIC
 	return
 
 
 Route2_EventScript_Rival_After_Battle::
+	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	msgbox Route2_EventScript_Rival_After_Battle_Text_0
 	applymovement 5, rival_contemplates
 	waitmovement 0

@@ -2,25 +2,35 @@ DewfordTown_MapScripts::
 	.byte 0
 
 
-DewfordTown_EventScript_MysteryMan::
+SatatsuTown_EventScript_MysteryMan::
 	lock
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
 	applymovement 1, mysteryman_walks_to_player
-	msgbox DewfordTown_EventScript_MysteryMan_Text_0, MSGBOX_AUTOCLOSE
+	msgbox SatatsuTown_EventScript_MysteryMan_Text_0, MSGBOX_AUTOCLOSE
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_1
+	msgbox SatatsuTown_EventScript_MysteryMan_Text_1
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_2
+	msgbox SatatsuTown_EventScript_MysteryMan_Text_2
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox DewfordTown_EventScript_MysteryMan_Text_3
+	msgbox SatatsuTown_EventScript_MysteryMan_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
-	setvar VAR_GOTTEN_FIRST_BADGE, 1
+	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
+	removeobject 1
+	release
+	end
+
+
+SatatsuTown_EventScript_Go_Defeat_Gym::
+	lock
+	msgbox SatatsuTown_EventScript_Go_Defeat_Gym_Text_0, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, satatsu_move_player_left
+	waitmovement 0
 	release
 	end
 
@@ -51,6 +61,11 @@ mysteryman_walks_away:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
+	step_end
+
+satatsu_move_player_left:
+	walk_left
+	walk_left
 	step_end
 
 @@ -1,802 +1,116 @@
@@ -230,7 +245,7 @@ DewfordTown_EventScript_SailToSlateport::
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE109
 	copyobjectxytoperm LOCALID_BRINEY_R109
-	setvar VAR_GOTTEN_FIRST_BADGE, 1
+	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	release
 	end
@@ -840,25 +855,24 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
 
-DewfordTown_EventScript_MysteryMan_Text_0:
+SatatsuTown_EventScript_MysteryMan_Text_0:
 	.string "So you must be, {PLAYER}.\l"
-	.string "Who am I?\l"
-	.string "Well that is none of your concern for\l"
-	.string "the moment. For now, you can call me\l"
-	.string "Egor.\p"
+	.string "Who am I? Well that is none of your\l"
+	.string "concern for the moment. For now, you\l"
+	.string "can call me Egor.\p"
 	.string "I am here to talk to you about the\n"
 	.string "letter that Professor Spruce asked\l"
 	.string "you to deliver to Chief Mach of Kazani\l"
 	.string "Village.\l"
 	.string "Ring any bells?$"
 
-DewfordTown_EventScript_MysteryMan_Text_1:
+SatatsuTown_EventScript_MysteryMan_Text_1:
 	.string "You see, the thing is that the\n"
 	.string "aforementioned letter contains some\l"
 	.string "very valuable information about the\l"
 	.string "doings and whereabouts of a certa...$"
 
-DewfordTown_EventScript_MysteryMan_Text_2:
+SatatsuTown_EventScript_MysteryMan_Text_2:
 	.string "Perhaps I've said too much already...\p"
 	.string "The point is that I need to find out as\n"
 	.string "much as I can about that letter before\l"
@@ -872,7 +886,7 @@ DewfordTown_EventScript_MysteryMan_Text_2:
 	.string "...uh-huh, OK surprised and slightly\n"
 	.string "worried. I see, I see.$"
 
-DewfordTown_EventScript_MysteryMan_Text_3:
+SatatsuTown_EventScript_MysteryMan_Text_3:
 	.string "Well, this has been most helpful,\n"
 	.string "{PLAYER}. Thank you.\p"
 	.string "Before we part ways, I must advise you\n"
@@ -882,3 +896,8 @@ DewfordTown_EventScript_MysteryMan_Text_3:
 	.string "at this point in time we know very\l"
 	.string "little about...\p"
 	.string "I'll be in touch, {PLAYER}.$"
+
+SatatsuTown_EventScript_Go_Defeat_Gym_Text_0:
+	.string "Didn't the Chief mention something\n"
+	.string "about a gym around here? I should\l"
+	.string "probably go check that out first...$"

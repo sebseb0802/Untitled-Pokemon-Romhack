@@ -32,7 +32,7 @@ script KazaniVillage_House1_EventScript_KazaniChief{
         waitmovement(0)
         msgbox(format("I see...\pVery well then."))
         applymovement(1, chief_turns_to_player)
-        msgbox(format("Thank you very much for this, {PLAYER}. There's no need for you to go all the way back to Professor Spruce, I can send a messenger.\pFor what to do next...\pAh-ha! That's right!\pThere is a gym just in Satatsu Town, just east of here! Simply take the Kazani Pass on the east side of this village onto Route 2 and you'll be on your way in no time!\pGood luck, {PLAYER}! I'll be in touch."))
+        msgbox(format("Thank you very much for this, {PLAYER}. There's no need for you to go all the way back to Professor Spruce, I can send a messenger.\pThere is a gym in Satatsu Town, just east of here! Simply take the Kazani Pass on the east side of this village onto Route 2 and you'll be on your way in no time!\pGood luck, {PLAYER}! I'm sure our paths will cross again soon."))
         release
         closemessage
         setflag(FLAG_KAZANI_VILLAGE_GIVEN_LETTER)

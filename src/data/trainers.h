@@ -142,7 +142,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SatatsuGym_BlackBelt1),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_SatatsuGym_BlackBelt1),
     },
 
     [TRAINER_SATATSU_GYM_BLACK_BELT_2] =
@@ -154,7 +154,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SatatsuGym_BlackBelt2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_SatatsuGym_BlackBelt2),
     },
 
     [TRAINER_SATATSU_GYM_LEADER_MACH] =

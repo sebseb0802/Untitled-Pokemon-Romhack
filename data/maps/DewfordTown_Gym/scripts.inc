@@ -28,7 +28,8 @@ SatatsuGym_EventScript_LeaderMach_After_Battle::
 	msgbox SatatsuGym_EventScript_LeaderMach_After_Battle_Text_2
 	giveitem ITEM_TM08_BULK_UP
 	msgbox SatatsuGym_EventScript_LeaderMach_After_Battle_Text_3
-	setvar VAR_GOTTEN_FIRST_BADGE, 0
+	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 0
+	setvar VAR_GOTTEN_FIRST_BADGE, 1
 	closemessage
 	releaseall
 	return
