@@ -1,5 +1,38 @@
 DewfordTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_OnTransition
 	.byte 0
+
+
+DewfordTown_OnTransition::
+	goto_if_set FLAG_BADGE01_GET, DewfordTown_OnTransition_2
+	return
+
+DewfordTown_OnTransition_1:
+	lock
+	applymovement 1, mysteryman_surprised
+	waitmovement 0
+	applymovement 1, mysteryman_walks_to_player
+	msgbox DewfordTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
+	applymovement 1, mysteryman_paces
+	waitmovement 0
+	msgbox DewfordTown_OnTransition_Text_1
+	applymovement 1, mysteryman_surprised
+	waitmovement 0
+	msgbox DewfordTown_OnTransition_Text_2
+	applymovement 1, mysteryman_paces
+	waitmovement 0
+	msgbox DewfordTown_OnTransition_Text_3
+	applymovement 1, mysteryman_walks_away
+	waitmovement 0
+	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
+	setflag FLAG_MET_EGOR
+	removeobject 1
+	release
+	end
+
+DewfordTown_OnTransition_2:
+	goto_if_unset FLAG_MET_EGOR, DewfordTown_OnTransition_1
+	return
 
 
 SatatsuTown_EventScript_MysteryMan::
@@ -7,16 +40,16 @@ SatatsuTown_EventScript_MysteryMan::
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
 	applymovement 1, mysteryman_walks_to_player
-	msgbox SatatsuTown_EventScript_MysteryMan_Text_0, MSGBOX_AUTOCLOSE
+	msgbox DewfordTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox SatatsuTown_EventScript_MysteryMan_Text_1
+	msgbox DewfordTown_OnTransition_Text_1
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
-	msgbox SatatsuTown_EventScript_MysteryMan_Text_2
+	msgbox DewfordTown_OnTransition_Text_2
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox SatatsuTown_EventScript_MysteryMan_Text_3
+	msgbox DewfordTown_OnTransition_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
 	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
@@ -31,6 +64,20 @@ SatatsuTown_EventScript_Go_Defeat_Gym::
 	msgbox SatatsuTown_EventScript_Go_Defeat_Gym_Text_0, MSGBOX_AUTOCLOSE
 	applymovement OBJ_EVENT_ID_PLAYER, satatsu_move_player_left
 	waitmovement 0
+	release
+	end
+
+
+SatatsuTown_EventScript_GymSign::
+	lock
+	msgbox SatatsuTown_EventScript_GymSign_Text_0, MSGBOX_AUTOCLOSE
+	release
+	end
+
+
+SatatsuTown_EventScript_NPC_1::
+	lock
+	msgbox SatatsuTown_EventScript_NPC_1_Text_0, MSGBOX_NPC
 	release
 	end
 
@@ -855,7 +902,7 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
 
-SatatsuTown_EventScript_MysteryMan_Text_0:
+DewfordTown_OnTransition_Text_0:
 	.string "So you must be, {PLAYER}.\l"
 	.string "Who am I? Well that is none of your\l"
 	.string "concern for the moment. For now, you\l"
@@ -866,13 +913,13 @@ SatatsuTown_EventScript_MysteryMan_Text_0:
 	.string "Village.\l"
 	.string "Ring any bells?$"
 
-SatatsuTown_EventScript_MysteryMan_Text_1:
+DewfordTown_OnTransition_Text_1:
 	.string "You see, the thing is that the\n"
 	.string "aforementioned letter contains some\l"
 	.string "very valuable information about the\l"
 	.string "doings and whereabouts of a certa...$"
 
-SatatsuTown_EventScript_MysteryMan_Text_2:
+DewfordTown_OnTransition_Text_2:
 	.string "Perhaps I've said too much already...\p"
 	.string "The point is that I need to find out as\n"
 	.string "much as I can about that letter before\l"
@@ -886,7 +933,7 @@ SatatsuTown_EventScript_MysteryMan_Text_2:
 	.string "...uh-huh, OK surprised and slightly\n"
 	.string "worried. I see, I see.$"
 
-SatatsuTown_EventScript_MysteryMan_Text_3:
+DewfordTown_OnTransition_Text_3:
 	.string "Well, this has been most helpful,\n"
 	.string "{PLAYER}. Thank you.\p"
 	.string "Before we part ways, I must advise you\n"
@@ -901,3 +948,13 @@ SatatsuTown_EventScript_Go_Defeat_Gym_Text_0:
 	.string "Didn't the Chief mention something\n"
 	.string "about a gym around here? I should\l"
 	.string "probably go check that out first...$"
+
+SatatsuTown_EventScript_GymSign_Text_0:
+	.string "Satatsu Town Gym\n"
+	.string "Leader Mach\n"
+	.string "The old man with a punch to pack!$"
+
+SatatsuTown_EventScript_NPC_1_Text_0:
+	.string "I like using Sand-Attack to lower the\n"
+	.string "Accuracy of my opponents. What's your\l"
+	.string "favourite move?$"

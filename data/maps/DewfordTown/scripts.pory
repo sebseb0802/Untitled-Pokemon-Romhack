@@ -1,29 +1,30 @@
 mapscripts DewfordTown_MapScripts {
-
+	MAP_SCRIPT_ON_TRANSITION: DewfordTown_OnTransition
 }
 
-script SatatsuTown_EventScript_MysteryMan {
-    lock
-    applymovement(1, mysteryman_surprised)
-    waitmovement(0)
-    applymovement(1, mysteryman_walks_to_player)
-    msgbox(format("So you must be, {PLAYER}.\lWho am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
-    applymovement(1, mysteryman_paces)
-    waitmovement(0)
-    msgbox(format("You see, the thing is that the aforementioned letter contains some very valuable information about the doings and whereabouts of a certa..."))
-    applymovement(1, mysteryman_surprised)
-    waitmovement(0)
-    msgbox(format("Perhaps I've said too much already...\pThe point is that I need to find out as much as I can about that letter before things get...\lbad...\pDid you happen to take a glimpse at the letter?\p...\pNo? Alright then...\pWhat about the Chief's reaction?\p...uh-huh, OK surprised and slightly worried. I see, I see."))
-    applymovement(1, mysteryman_paces)
-    waitmovement(0)
-    msgbox(format("Well, this has been most helpful, {PLAYER}. Thank you.\pBefore we part ways, I must advise you to keep an eye out for suspicious activity. Something bad is happening in Menai at the moment...something that at this point in time we know very little about...\pI'll be in touch, {PLAYER}."))
-    applymovement(1, mysteryman_walks_away)
-    waitmovement(0)
-    setvar(VAR_SATATSU_SPEAK_WITH_EGOR, 1)
-    setflag(FLAG_MET_EGOR)
-	removeobject(1)
-    release
-    end
+script DewfordTown_OnTransition {
+	if (flag(FLAG_BADGE01_GET) && !flag(FLAG_MET_EGOR)) {
+		lock
+    	applymovement(1, mysteryman_surprised)
+    	waitmovement(0)
+    	applymovement(1, mysteryman_walks_to_player)
+    	msgbox(format("So you must be, {PLAYER}.\lWho am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
+    	applymovement(1, mysteryman_paces)
+    	waitmovement(0)
+    	msgbox(format("You see, the thing is that the aforementioned letter contains some very valuable information about the doings and whereabouts of a certa..."))
+    	applymovement(1, mysteryman_surprised)
+    	waitmovement(0)
+    	msgbox(format("Perhaps I've said too much already...\pThe point is that I need to find out as much as I can about that letter before things get...\lbad...\pDid you happen to take a glimpse at the letter?\p...\pNo? Alright then...\pWhat about the Chief's reaction?\p...uh-huh, OK surprised and slightly worried. I see, I see."))
+    	applymovement(1, mysteryman_paces)
+    	waitmovement(0)
+    	msgbox(format("Well, this has been most helpful, {PLAYER}. Thank you.\pBefore we part ways, I must advise you to keep an eye out for suspicious activity. Something bad is happening in Menai at the moment...something that at this point in time we know very little about...\pI'll be in touch, {PLAYER}."))
+    	applymovement(1, mysteryman_walks_away)
+    	waitmovement(0)
+    	setflag(FLAG_MET_EGOR)
+		removeobject(1)
+    	release
+    	end
+	}
 }
 
 script SatatsuTown_EventScript_Go_Defeat_Gym {
@@ -35,6 +36,19 @@ script SatatsuTown_EventScript_Go_Defeat_Gym {
 	end
 }
 
+script SatatsuTown_EventScript_GymSign {
+	lock
+	msgbox(format("Satatsu Town Gym\nLeader Mach\nThe old man with a punch to pack!"), MSGBOX_AUTOCLOSE)
+	release
+	end
+}
+
+script SatatsuTown_EventScript_NPC_1 {
+	lock
+	msgbox(format("I like using Sand-Attack to lower the Accuracy of my opponents. What's your favourite move?"), MSGBOX_NPC)
+	release
+	end
+}
 
 movement mysteryman_surprised {
     emote_exclamation_mark

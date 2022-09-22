@@ -43,9 +43,7 @@ gText_Birch_SoItsPlayer::
 gText_Birch_YourePlayer::
 	.string "Ah, okay!\p"
 	.string "You're {PLAYER}{KUN} who's moved to\n"
-	.string "Latilyn all the way from Unova, "
-	.string "if I'm not mistaken.\p"
-	.string "Quite close to the lab, too!\p"
+	.string "Latilyn all the way from Unova!\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
@@ -55,6 +53,6 @@ gText_Birch_AreYouReady::
 	.string "Take courage, and leap into the\n"
 	.string "world of Pokémon where dreams,\l"
 	.string "adventure, and friendships await!\p"
-	.string "I have a favour to ask of you so\l" 
+	.string "I have a favour to ask of you so\n" 
 	.string "swing by the lab later!\p"
 	.string "$"

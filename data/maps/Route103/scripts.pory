@@ -1,3 +1,4 @@
+raw `
 .set LOCALID_RIVAL, 2
 
 Route103_MapScripts::
@@ -352,76 +353,71 @@ Route103_Text_ShortcutToOldale:
 Route103_Text_RouteSign:
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+`
 
-Route3_EventScript_Aroma_Lady_1::
-	trainerbattle_single TRAINER_ROUTE_3_AROMA_LADY_1, aromaLady1_intro, aromaLady1_outro
-	return
+script Route3_EventScript_Aroma_Lady_1 {
+    trainerbattle_single(TRAINER_ROUTE_3_AROMA_LADY_1, aromaLady1_intro, aromaLady1_outro)
+}
 
+script Route3_EventScript_Picnicker_1 {
+    trainerbattle_single(TRAINER_ROUTE_3_PICNICKER_1, picknicker1_intro, picknicker1_outro)
+}
 
-Route3_EventScript_Picnicker_1::
-	trainerbattle_single TRAINER_ROUTE_3_PICNICKER_1, picknicker1_intro, picknicker1_outro
-	return
+script Route3_EventScript_Lass_3 {
+    trainerbattle_single(TRAINER_ROUTE_3_LASS_3, lass3_intro, lass3_outro)
+}
 
+script Route3_EventScript_Youngster_4 {
+    trainerbattle_single(TRAINER_ROUTE_3_YOUNGSTER_4, youngster4_intro, youngster4_intro)
+}
 
-Route3_EventScript_Lass_3::
-	trainerbattle_single TRAINER_ROUTE_3_LASS_3, lass3_intro, lass3_outro
-	return
+script Route3_EventScript_NPC_1 {
+    lock
+    msgbox(format("Look! Look! You can nearly see the top of Kazani Mountain from here!"))
+    release
+    end
+}
 
-
-Route3_EventScript_Youngster_4::
-	trainerbattle_single TRAINER_ROUTE_3_YOUNGSTER_4, youngster4_intro, youngster4_intro
-	return
-
-
-Route3_EventScript_NPC_1::
-	lock
-	msgbox Route3_EventScript_NPC_1_Text_0
-	release
-	end
-
-
-Route3_EventScript_Pokeball1::
-	removeobject 6
-	giveitem ITEM_ANTIDOTE
+script Route3_EventScript_Pokeball1{
+    removeobject(6)
+    giveitem(ITEM_ANTIDOTE)
 	closemessage
-	return
+}
 
-
-Route3_EventScript_Pokeball2::
-	removeobject 7
-	giveitem ITEM_MYSTIC_WATER
+script Route3_EventScript_Pokeball2{
+    removeobject(7)
+    giveitem(ITEM_MYSTIC_WATER)
 	closemessage
-	return
+}
 
+text aromaLady1_intro {
+    format("Don't you just love the scent of grass-type Pokémon?")
+}
 
-Route3_EventScript_NPC_1_Text_0:
-	.string "Look! Look! You can nearly see the top\n"
-	.string "of Kazani Mountain from here!$"
+text aromaLady1_outro {
+    format("So soothing...")
+}
 
-aromaLady1_intro::
-	.string "Don't you just love the scent of\n"
-	.string "grass-type Pokémon?$"
+text picknicker1_intro {
+    format("Standing over this pond is kinda scary!")
+}
 
-aromaLady1_outro::
-	.string "So soothing...$"
+text picknicker1_outro {
+    format("Wow... you musn't be scared at all!")
+}
 
-picknicker1_intro::
-	.string "Standing over this pond is kinda scary!$"
+text lass3_intro {
+    format("I like to use Pokémon that other Trainers will underestimate!")
+}
 
-picknicker1_outro::
-	.string "Wow... you musn't be scared at all!$"
+text lass3_outro {
+    format("I underestimated you...")
+}
 
-lass3_intro::
-	.string "I like to use Pokémon that other\n"
-	.string "Trainers will underestimate!$"
+text youngster4_intro {
+    format("My favourite place to be is on this route! I like seeing all of the cool Pokémon.")
+}
 
-lass3_outro::
-	.string "I underestimated you...$"
-
-youngster4_intro::
-	.string "My favourite place to be is on this\n"
-	.string "route! I like seeing all of the cool\l"
-	.string "Pokémon.$"
-
-youngster4_outro::
-	.string "Your Pokémon are pretty cool too!$"
+text youngster4_outro {
+    format("Your Pokémon are pretty cool too!")
+}

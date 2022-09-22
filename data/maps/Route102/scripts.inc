@@ -172,6 +172,8 @@ Route2_EventScript_Rival_After_Battle::
 	waitmovement 0
 	setvar VAR_BATTLED_RIVAL_ROUTE_2, 1
 	setflag FLAG_RIVAL_ENCOUNTER_ROUTE_2
+	fadeoutbgm 1
+	playbgm MUS_DP_ROUTE203_DAY, FALSE
 	removeobject 5
 	releaseall
 	end

@@ -987,6 +987,8 @@ LatilynTown_EventScript_SeeRival_Upmost::
 	waitmovement 0
 	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
 	setvar VAR_SEEN_RIVAL_FOR_FIRST_TIME, 1
+	fadeoutbgm 1
+	playbgm MUS_DP_TWINLEAF_NIGHT, TRUE
 	removeobject 1
 	release
 	end

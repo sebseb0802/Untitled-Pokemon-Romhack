@@ -54,8 +54,8 @@
 #define FLAG_ROUTE2_HIDDENITEM_1    0x2A // Unused Flag
 #define FLAG_RIVAL_ENCOUNTER_ROUTE_2    0x2B // Unused Flag
 #define FLAG_MET_EGOR    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_ROUTE3_POKEBALL_1    0x2D // Unused Flag
+#define FLAG_ROUTE3_POKEBALL_2   0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
