@@ -24,7 +24,6 @@ DewfordTown_OnTransition_1:
 	msgbox DewfordTown_OnTransition_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
-	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	removeobject 1
 	release
@@ -33,30 +32,6 @@ DewfordTown_OnTransition_1:
 DewfordTown_OnTransition_2:
 	goto_if_unset FLAG_MET_EGOR, DewfordTown_OnTransition_1
 	return
-
-
-SatatsuTown_EventScript_MysteryMan::
-	lock
-	applymovement 1, mysteryman_surprised
-	waitmovement 0
-	applymovement 1, mysteryman_walks_to_player
-	msgbox DewfordTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
-	applymovement 1, mysteryman_paces
-	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_1
-	applymovement 1, mysteryman_surprised
-	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_2
-	applymovement 1, mysteryman_paces
-	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_3
-	applymovement 1, mysteryman_walks_away
-	waitmovement 0
-	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
-	setflag FLAG_MET_EGOR
-	removeobject 1
-	release
-	end
 
 
 SatatsuTown_EventScript_Go_Defeat_Gym::
@@ -903,10 +878,10 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "definition of “in” right now.$"
 
 DewfordTown_OnTransition_Text_0:
-	.string "So you must be, {PLAYER}.\l"
-	.string "Who am I? Well that is none of your\l"
-	.string "concern for the moment. For now, you\l"
-	.string "can call me Egor.\p"
+	.string "So you must be, {PLAYER}. Who am I?\n"
+	.string "Well that is none of your concern for\l"
+	.string "the moment. For now, you can call me\l"
+	.string "Egor.\p"
 	.string "I am here to talk to you about the\n"
 	.string "letter that Professor Spruce asked\l"
 	.string "you to deliver to Chief Mach of Kazani\l"

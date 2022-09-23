@@ -8,7 +8,7 @@ script DewfordTown_OnTransition {
     	applymovement(1, mysteryman_surprised)
     	waitmovement(0)
     	applymovement(1, mysteryman_walks_to_player)
-    	msgbox(format("So you must be, {PLAYER}.\lWho am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
+    	msgbox(format("So you must be, {PLAYER}. Who am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
     	applymovement(1, mysteryman_paces)
     	waitmovement(0)
     	msgbox(format("You see, the thing is that the aforementioned letter contains some very valuable information about the doings and whereabouts of a certa..."))
