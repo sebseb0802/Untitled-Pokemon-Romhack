@@ -92,15 +92,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 20,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_SATATSU_SPEAK_WITH_EGOR",
-      "var_value": "0",
-      "script": "SatatsuTown_EventScript_MysteryMan"
-    },
-    {
-      "type": "trigger",
       "x": 38,
       "y": 9,
       "elevation": 0,

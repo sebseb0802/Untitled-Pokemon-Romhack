@@ -1,27 +1,27 @@
 DewfordTown_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SatatsuTown_OnTransition
 	.byte 0
 
 
-DewfordTown_OnTransition::
-	goto_if_set FLAG_BADGE01_GET, DewfordTown_OnTransition_2
+SatatsuTown_OnTransition::
+	goto_if_set FLAG_BADGE01_GET, SatatsuTown_OnTransition_2
 	return
 
-DewfordTown_OnTransition_1:
+SatatsuTown_OnTransition_1:
 	lock
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
 	applymovement 1, mysteryman_walks_to_player
-	msgbox DewfordTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
+	msgbox SatatsuTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_1
+	msgbox SatatsuTown_OnTransition_Text_1
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_2
+	msgbox SatatsuTown_OnTransition_Text_2
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox DewfordTown_OnTransition_Text_3
+	msgbox SatatsuTown_OnTransition_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
 	setflag FLAG_MET_EGOR
@@ -29,8 +29,8 @@ DewfordTown_OnTransition_1:
 	release
 	end
 
-DewfordTown_OnTransition_2:
-	goto_if_unset FLAG_MET_EGOR, DewfordTown_OnTransition_1
+SatatsuTown_OnTransition_2:
+	goto_if_unset FLAG_MET_EGOR, SatatsuTown_OnTransition_1
 	return
 
 
@@ -877,7 +877,7 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
 
-DewfordTown_OnTransition_Text_0:
+SatatsuTown_OnTransition_Text_0:
 	.string "So you must be, {PLAYER}. Who am I?\n"
 	.string "Well that is none of your concern for\l"
 	.string "the moment. For now, you can call me\l"
@@ -888,13 +888,13 @@ DewfordTown_OnTransition_Text_0:
 	.string "Village.\l"
 	.string "Ring any bells?$"
 
-DewfordTown_OnTransition_Text_1:
+SatatsuTown_OnTransition_Text_1:
 	.string "You see, the thing is that the\n"
 	.string "aforementioned letter contains some\l"
 	.string "very valuable information about the\l"
 	.string "doings and whereabouts of a certa...$"
 
-DewfordTown_OnTransition_Text_2:
+SatatsuTown_OnTransition_Text_2:
 	.string "Perhaps I've said too much already...\p"
 	.string "The point is that I need to find out as\n"
 	.string "much as I can about that letter before\l"
@@ -908,7 +908,7 @@ DewfordTown_OnTransition_Text_2:
 	.string "...uh-huh, OK surprised and slightly\n"
 	.string "worried. I see, I see.$"
 
-DewfordTown_OnTransition_Text_3:
+SatatsuTown_OnTransition_Text_3:
 	.string "Well, this has been most helpful,\n"
 	.string "{PLAYER}. Thank you.\p"
 	.string "Before we part ways, I must advise you\n"

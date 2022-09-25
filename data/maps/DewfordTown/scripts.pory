@@ -1,8 +1,8 @@
 mapscripts DewfordTown_MapScripts {
-	MAP_SCRIPT_ON_TRANSITION: DewfordTown_OnTransition
+	MAP_SCRIPT_ON_TRANSITION: SatatsuTown_OnTransition
 }
 
-script DewfordTown_OnTransition {
+script SatatsuTown_OnTransition {
 	if (flag(FLAG_BADGE01_GET) && !flag(FLAG_MET_EGOR)) {
 		lock
     	applymovement(1, mysteryman_surprised)
