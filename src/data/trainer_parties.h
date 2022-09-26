@@ -125,7 +125,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Route2_Rival[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_SatatsuGym_BlackBelt1[] = {
     {
     .iv = 10,
-    .lvl = 10,
+    .lvl = 9,
     .species = SPECIES_MACHOP,
     .moves = {MOVE_LEER, MOVE_LOW_KICK}
     }
@@ -165,7 +165,7 @@ static const struct TrainerMonItemCustomMoves sParty_SatatsuGym_Mach[] = {
     .iv = 10,
     .lvl = 13,
     .species = SPECIES_RIOLU,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_NONE,
     .moves = {MOVE_QUICK_ATTACK, MOVE_ENDURE, MOVE_LOW_KICK, MOVE_BULK_UP}
     }
 };
@@ -199,52 +199,57 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route3_Picnicker1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Route3_Lass_3[] = {
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_HOUNDOUR,
+    .lvl = 11,
+    .species = SPECIES_CASCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_SILCOON,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Route3_Youngster_4[] = {
     {
     .iv = 0,
-    .lvl = 12,
+    .lvl = 11,
     .species = SPECIES_ZUBAT,
+    },
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_NIDORAN_M,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route4_Camper_4[] = {
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_ZIGZAGOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_SHROOMISH,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Route4_PokeFan_1[] = {
+    {
+    .iv = 0,
+    .lvl = 11,
+    .species = SPECIES_PIDOVE,
     },
     {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_NIDORAN_M,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst2[] = {
-    {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
     },
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
+    .lvl = 12,
+    .species = SPECIES_HOUNDOUR,
     }
 };
 

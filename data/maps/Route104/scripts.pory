@@ -1,3 +1,4 @@
+raw `
 @ NOTE: Route 104's sail to Dewford script references local IDs from Dewford's map.
 @  These are labeled in DewfordTown/scripts.inc
 .set LOCALID_RIVAL, 34
@@ -1170,43 +1171,42 @@ Route104_Text_BrendanPostBattle:
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+`
 
-Route4_EventScript_Pokeball1::
-	setflag FLAG_ROUTE4_POKEBALL_1
-	removeobject 1
-	giveitem ITEM_REPEL
-	closemessage
-	return
+script Route4_EventScript_Pokeball1 {
+    setflag(FLAG_ROUTE4_POKEBALL_1)
+    removeobject(1)
+    giveitem(ITEM_REPEL)
+    closemessage
+}
 
+script Route4_EventScript_Pokeball2 {
+    setflag(FLAG_ROUTE4_POKEBALL_2)
+    removeobject(2)
+    giveitem(ITEM_MOON_STONE)
+    closemessage
+}
 
-Route4_EventScript_Pokeball2::
-	setflag FLAG_ROUTE4_POKEBALL_2
-	removeobject 2
-	giveitem ITEM_MOON_STONE
-	closemessage
-	return
+script Route4_EventScript_Camper4 {
+    trainerbattle_single(TRAINER_ROUTE_4_CAMPER_4, camper4_intro, camper4_outro)
+}
 
+script Route4_EventScript_Pokefan1 {
+    trainerbattle_single(TRAINER_ROUTE_4_POKEFAN_1, pokefan1_intro, pokefan1_outro)
+}
 
-Route4_EventScript_Camper4::
-	trainerbattle_single TRAINER_ROUTE_4_CAMPER_4, camper4_intro, camper4_outro
-	return
+text camper4_intro {
+    format("I love camping here because I get to be right by the sea!")
+}
 
+text camper4_outro {
+    format("Such a calming breeze...")
+}
 
-Route4_EventScript_Pokefan1::
-	trainerbattle_single TRAINER_ROUTE_4_POKEFAN_1, pokefan1_intro, pokefan1_outro
-	return
+text pokefan1_intro {
+    format("I love using uncommon Pokémon that'll make other trainers jealous!")
+}
 
-
-camper4_intro::
-	.string "I love camping here because I get to be\n"
-	.string "right by the sea!$"
-
-camper4_outro::
-	.string "Such a calming breeze...$"
-
-pokefan1_intro::
-	.string "I love using uncommon Pokémon that'll\n"
-	.string "make other trainers jealous!$"
-
-pokefan1_outro::
-	.string "My Pokémon are rarer!$"
+text pokefan1_outro {
+    format("My Pokémon are rarer!")
+}

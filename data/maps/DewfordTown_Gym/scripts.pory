@@ -41,7 +41,7 @@ script SatatsuGym_EventScript_LeaderMach_After_Battle {
 	msgbox(format("Also, take this TM!"))
 	giveitem(ITEM_TM08_BULK_UP)
 	msgbox(format("Bulk Up lets your Pokémon toughen up before taking and/or dealing a hit.\lA very useful move indeed!\pI wish you the best of luck in your future endevours."))
-	setvar(VAR_SATATSU_SPEAK_WITH_EGOR, 0)
+	setvar(VAR_SATATSU_SPOKEN_WITH_EGOR, 1)
 	setvar(VAR_GOTTEN_FIRST_BADGE, 1)
 	closemessage
 	releaseall

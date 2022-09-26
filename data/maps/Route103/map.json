@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_DEWFORD_TOWN"
+    },
+    {
+      "direction": "right",
+      "offset": -30,
+      "map": "MAP_ROUTE104"
     }
   ],
   "object_events": [
@@ -62,7 +67,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 30,
-      "y": 16,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
       "movement_range_x": 0,

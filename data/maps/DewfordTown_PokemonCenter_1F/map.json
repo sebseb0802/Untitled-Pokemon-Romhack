@@ -2,7 +2,7 @@
   "id": "MAP_DEWFORD_TOWN_POKEMON_CENTER_1F",
   "name": "DewfordTown_PokemonCenter_1F",
   "layout": "LAYOUT_POKEMON_CENTER_1F",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DP_POKE_CENTER_NIGHT",
   "region_map_section": "MAPSEC_SATATSU_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "x": 7,
+      "x": 3,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -29,10 +29,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 10,
-      "y": 6,
+      "x": 17,
+      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 5,
-      "y": 5,
+      "x": 7,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 2,
@@ -52,29 +52,35 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DewfordTown_PokemonCenter_1F_EventScript_Man",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 16,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SatatsuTown_MartMan",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 7,
-      "y": 8,
+      "x": 10,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_DEWFORD_TOWN",
       "dest_warp_id": 3
     },
     {
-      "x": 6,
-      "y": 8,
+      "x": 9,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_DEWFORD_TOWN",
       "dest_warp_id": 3
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "elevation": 4,
-      "dest_map": "MAP_DEWFORD_TOWN_POKEMON_CENTER_2F",
-      "dest_warp_id": 0
     }
   ],
   "coord_events": [

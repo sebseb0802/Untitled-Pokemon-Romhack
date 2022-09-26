@@ -381,6 +381,7 @@ Route3_EventScript_NPC_1::
 
 
 Route3_EventScript_Pokeball1::
+	setflag FLAG_ROUTE3_POKEBALL_1
 	removeobject 6
 	giveitem ITEM_ANTIDOTE
 	closemessage
@@ -388,6 +389,7 @@ Route3_EventScript_Pokeball1::
 
 
 Route3_EventScript_Pokeball2::
+	setflag FLAG_ROUTE3_POKEBALL_2
 	removeobject 7
 	giveitem ITEM_MYSTIC_WATER
 	closemessage

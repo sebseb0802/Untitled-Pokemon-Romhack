@@ -2,7 +2,7 @@ LatilynTown_EventScript_Give_Running_Shoes::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_MET_EGOR
 	setvar VAR_RECEIVED_RUNNING_SHOES, 1
-	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
+	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 0
 	end
 
 

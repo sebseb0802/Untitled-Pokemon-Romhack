@@ -2,7 +2,7 @@
   "id": "MAP_OLDALE_TOWN_HOUSE1",
   "name": "OldaleTown_House1",
   "layout": "LAYOUT_HOUSE1",
-  "music": "MUS_HG_ECRUTEAK",
+  "music": "MUS_DP_SOLACEON_NIGHT",
   "region_map_section": "MAPSEC_KAZANI_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

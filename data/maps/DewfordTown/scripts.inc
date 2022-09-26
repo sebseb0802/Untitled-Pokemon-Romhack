@@ -1,37 +1,38 @@
 DewfordTown_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SatatsuTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, DewfordTown_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
+DewfordTown_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+	map_script_2 VAR_SATATSU_SPOKEN_WITH_EGOR, 1, Speak_With_Egor_Satatsu
+	.2byte 0
 
-SatatsuTown_OnTransition::
-	goto_if_set FLAG_BADGE01_GET, SatatsuTown_OnTransition_2
+
+Speak_With_Egor_Satatsu::
+	goto_if_unset FLAG_MET_EGOR, Speak_With_Egor_Satatsu_1
 	return
 
-SatatsuTown_OnTransition_1:
+Speak_With_Egor_Satatsu_1:
 	lock
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
 	applymovement 1, mysteryman_walks_to_player
-	msgbox SatatsuTown_OnTransition_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Speak_With_Egor_Satatsu_Text_0, MSGBOX_AUTOCLOSE
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox SatatsuTown_OnTransition_Text_1
+	msgbox Speak_With_Egor_Satatsu_Text_1
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
-	msgbox SatatsuTown_OnTransition_Text_2
+	msgbox Speak_With_Egor_Satatsu_Text_2
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox SatatsuTown_OnTransition_Text_3
+	msgbox Speak_With_Egor_Satatsu_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
 	setflag FLAG_MET_EGOR
+	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 0
 	removeobject 1
 	release
 	end
-
-SatatsuTown_OnTransition_2:
-	goto_if_unset FLAG_MET_EGOR, SatatsuTown_OnTransition_1
-	return
 
 
 SatatsuTown_EventScript_Go_Defeat_Gym::
@@ -267,7 +268,7 @@ DewfordTown_EventScript_SailToSlateport::
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE109
 	copyobjectxytoperm LOCALID_BRINEY_R109
-	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
+	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	release
 	end
@@ -877,7 +878,7 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
 
-SatatsuTown_OnTransition_Text_0:
+Speak_With_Egor_Satatsu_Text_0:
 	.string "So you must be, {PLAYER}. Who am I?\n"
 	.string "Well that is none of your concern for\l"
 	.string "the moment. For now, you can call me\l"
@@ -888,13 +889,13 @@ SatatsuTown_OnTransition_Text_0:
 	.string "Village.\l"
 	.string "Ring any bells?$"
 
-SatatsuTown_OnTransition_Text_1:
+Speak_With_Egor_Satatsu_Text_1:
 	.string "You see, the thing is that the\n"
 	.string "aforementioned letter contains some\l"
 	.string "very valuable information about the\l"
 	.string "doings and whereabouts of a certa...$"
 
-SatatsuTown_OnTransition_Text_2:
+Speak_With_Egor_Satatsu_Text_2:
 	.string "Perhaps I've said too much already...\p"
 	.string "The point is that I need to find out as\n"
 	.string "much as I can about that letter before\l"
@@ -908,7 +909,7 @@ SatatsuTown_OnTransition_Text_2:
 	.string "...uh-huh, OK surprised and slightly\n"
 	.string "worried. I see, I see.$"
 
-SatatsuTown_OnTransition_Text_3:
+Speak_With_Egor_Satatsu_Text_3:
 	.string "Well, this has been most helpful,\n"
 	.string "{PLAYER}. Thank you.\p"
 	.string "Before we part ways, I must advise you\n"

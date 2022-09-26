@@ -1,9 +1,11 @@
 mapscripts DewfordTown_MapScripts {
-	MAP_SCRIPT_ON_TRANSITION: SatatsuTown_OnTransition
+	MAP_SCRIPT_ON_FRAME_TABLE [
+		VAR_SATATSU_SPOKEN_WITH_EGOR, 1: Speak_With_Egor_Satatsu
+	] 
 }
 
-script SatatsuTown_OnTransition {
-	if (flag(FLAG_BADGE01_GET) && !flag(FLAG_MET_EGOR)) {
+script Speak_With_Egor_Satatsu {
+	if (!flag(FLAG_MET_EGOR)) {
 		lock
     	applymovement(1, mysteryman_surprised)
     	waitmovement(0)
@@ -21,6 +23,7 @@ script SatatsuTown_OnTransition {
     	applymovement(1, mysteryman_walks_away)
     	waitmovement(0)
     	setflag(FLAG_MET_EGOR)
+		setvar(VAR_SATATSU_SPOKEN_WITH_EGOR, 0)
 		removeobject(1)
     	release
     	end
@@ -254,7 +257,7 @@ DewfordTown_EventScript_SailToSlateport::
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE109
 	copyobjectxytoperm LOCALID_BRINEY_R109
-	setvar VAR_SATATSU_SPEAK_WITH_EGOR, 1
+	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	release
 	end

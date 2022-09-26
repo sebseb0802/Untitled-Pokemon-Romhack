@@ -16,11 +16,11 @@
 #define TRAINER_SATATSU_GYM_BLACK_BELT_2     12
 #define TRAINER_SATATSU_GYM_LEADER_MACH      13
 #define TRAINER_ROUTE_3_AROMA_LADY_1         14
-#define TRAINER_ROUTE_3_PICNICKER_1         15
+#define TRAINER_ROUTE_3_PICNICKER_1          15
 #define TRAINER_ROUTE_3_LASS_3               16
 #define TRAINER_ROUTE_3_YOUNGSTER_4          17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
-#define TRAINER_GRUNT_WEATHER_INST_3         19
+#define TRAINER_ROUTE_4_CAMPER_4             18
+#define TRAINER_ROUTE_4_POKEFAN_1            19
 #define TRAINER_GRUNT_MUSEUM_1               20
 #define TRAINER_GRUNT_MUSEUM_2               21
 #define TRAINER_GRUNT_SPACE_CENTER_1         22

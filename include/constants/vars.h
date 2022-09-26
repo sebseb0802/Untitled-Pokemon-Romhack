@@ -107,7 +107,7 @@
 #define VAR_SLATEPORT_CITY_STATE             0x4058
 #define VAR_BATTLED_RIVAL_ROUTE_2            0x4059 // Used Var
 #define VAR_RUSTBORO_CITY_STATE              0x405A
-#define VAR_SATATSU_SPEAK_WITH_EGOR          0x405B // Used Var
+#define VAR_SATATSU_SPOKEN_WITH_EGOR          0x405B // Used Var
 #define VAR_GOTTEN_FIRST_BADGE               0x405C // Used Var
 #define VAR_MOSSDEEP_CITY_STATE              0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE            0x405E

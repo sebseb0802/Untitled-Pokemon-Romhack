@@ -1,3 +1,4 @@
+raw `
 .set LOCALID_NURSE, 1
 
 OldaleTown_PokemonCenter_1F_MapScripts::
@@ -62,26 +63,19 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "the second floor was built recently.\p"
 	.string "I traded POKéMON right away.$"
 
-KazaniVillage_MartMan::
-	lock
-	message KazaniVillage_MartMan_Text_0
-	waitmessage
-	pokemart KazaniVillage_Mart
-	msgbox KazaniVillage_MartMan_Text_1, MSGBOX_AUTOCLOSE
-	release
-	end
-
-
-	.align 2
-KazaniVillage_Mart:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_NONE
-
-KazaniVillage_MartMan_Text_0:
-	.string "Welcome!\lWhat can I do for you today?$"
-
-KazaniVillage_MartMan_Text_1:
-	.string "Come back soon!$"
+`
+script KazaniVillage_MartMan {
+    lock
+    message("Welcome!\lWhat can I do for you today?")
+    waitmessage
+    pokemart(KazaniVillage_Mart)
+    msgbox("Come back soon!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+mart KazaniVillage_Mart {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+}
