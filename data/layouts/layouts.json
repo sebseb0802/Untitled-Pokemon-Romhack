@@ -704,8 +704,8 @@
     {
       "id": "LAYOUT_LAVARIDGE_TOWN_POKEMON_CENTER_1F",
       "name": "LavaridgeTown_PokemonCenter_1F_Layout",
-      "width": 14,
-      "height": 9,
+      "width": 19,
+      "height": 11,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/LavaridgeTown_PokemonCenter_1F/border.bin",

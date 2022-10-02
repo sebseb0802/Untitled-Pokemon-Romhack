@@ -3,57 +3,57 @@ DewfordTown_MapScripts::
 	.byte 0
 
 DewfordTown_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_SATATSU_SPOKEN_WITH_EGOR, 1, Speak_With_Egor_Satatsu
+	map_script_2 VAR_Retsu_SPOKEN_WITH_EGOR, 1, Speak_With_Egor_Retsu
 	.2byte 0
 
 
-Speak_With_Egor_Satatsu::
-	goto_if_unset FLAG_MET_EGOR, Speak_With_Egor_Satatsu_1
+Speak_With_Egor_Retsu::
+	goto_if_unset FLAG_MET_EGOR, Speak_With_Egor_Retsu_1
 	return
 
-Speak_With_Egor_Satatsu_1:
+Speak_With_Egor_Retsu_1:
 	lock
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
 	applymovement 1, mysteryman_walks_to_player
-	msgbox Speak_With_Egor_Satatsu_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Speak_With_Egor_Retsu_Text_0, MSGBOX_AUTOCLOSE
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox Speak_With_Egor_Satatsu_Text_1
+	msgbox Speak_With_Egor_Retsu_Text_1
 	applymovement 1, mysteryman_surprised
 	waitmovement 0
-	msgbox Speak_With_Egor_Satatsu_Text_2
+	msgbox Speak_With_Egor_Retsu_Text_2
 	applymovement 1, mysteryman_paces
 	waitmovement 0
-	msgbox Speak_With_Egor_Satatsu_Text_3
+	msgbox Speak_With_Egor_Retsu_Text_3
 	applymovement 1, mysteryman_walks_away
 	waitmovement 0
 	setflag FLAG_MET_EGOR
-	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 0
+	setvar VAR_Retsu_SPOKEN_WITH_EGOR, 0
 	removeobject 1
 	release
 	end
 
 
-SatatsuTown_EventScript_Go_Defeat_Gym::
+RetsuTown_EventScript_Go_Defeat_Gym::
 	lock
-	msgbox SatatsuTown_EventScript_Go_Defeat_Gym_Text_0, MSGBOX_AUTOCLOSE
-	applymovement OBJ_EVENT_ID_PLAYER, satatsu_move_player_left
+	msgbox RetsuTown_EventScript_Go_Defeat_Gym_Text_0, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, Retsu_move_player_left
 	waitmovement 0
 	release
 	end
 
 
-SatatsuTown_EventScript_GymSign::
+RetsuTown_EventScript_GymSign::
 	lock
-	msgbox SatatsuTown_EventScript_GymSign_Text_0, MSGBOX_AUTOCLOSE
+	msgbox RetsuTown_EventScript_GymSign_Text_0, MSGBOX_AUTOCLOSE
 	release
 	end
 
 
-SatatsuTown_EventScript_NPC_1::
+RetsuTown_EventScript_NPC_1::
 	lock
-	msgbox SatatsuTown_EventScript_NPC_1_Text_0, MSGBOX_NPC
+	msgbox RetsuTown_EventScript_NPC_1_Text_0, MSGBOX_NPC
 	release
 	end
 
@@ -86,7 +86,7 @@ mysteryman_walks_away:
 	walk_fast_down
 	step_end
 
-satatsu_move_player_left:
+Retsu_move_player_left:
 	walk_left
 	walk_left
 	step_end
@@ -268,7 +268,7 @@ DewfordTown_EventScript_SailToSlateport::
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE109
 	copyobjectxytoperm LOCALID_BRINEY_R109
-	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 1
+	setvar VAR_Retsu_SPOKEN_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	release
 	end
@@ -878,24 +878,24 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
 
-Speak_With_Egor_Satatsu_Text_0:
+Speak_With_Egor_Retsu_Text_0:
 	.string "So you must be, {PLAYER}. Who am I?\n"
 	.string "Well that is none of your concern for\l"
 	.string "the moment. For now, you can call me\l"
 	.string "Egor.\p"
 	.string "I am here to talk to you about the\n"
 	.string "letter that Professor Spruce asked\l"
-	.string "you to deliver to Chief Mach of Kazani\l"
+	.string "you to deliver to Chief Mach of Katsikki\l"
 	.string "Village.\l"
 	.string "Ring any bells?$"
 
-Speak_With_Egor_Satatsu_Text_1:
+Speak_With_Egor_Retsu_Text_1:
 	.string "You see, the thing is that the\n"
 	.string "aforementioned letter contains some\l"
 	.string "very valuable information about the\l"
 	.string "doings and whereabouts of a certa...$"
 
-Speak_With_Egor_Satatsu_Text_2:
+Speak_With_Egor_Retsu_Text_2:
 	.string "Perhaps I've said too much already...\p"
 	.string "The point is that I need to find out as\n"
 	.string "much as I can about that letter before\l"
@@ -909,7 +909,7 @@ Speak_With_Egor_Satatsu_Text_2:
 	.string "...uh-huh, OK surprised and slightly\n"
 	.string "worried. I see, I see.$"
 
-Speak_With_Egor_Satatsu_Text_3:
+Speak_With_Egor_Retsu_Text_3:
 	.string "Well, this has been most helpful,\n"
 	.string "{PLAYER}. Thank you.\p"
 	.string "Before we part ways, I must advise you\n"
@@ -920,17 +920,17 @@ Speak_With_Egor_Satatsu_Text_3:
 	.string "little about...\p"
 	.string "I'll be in touch, {PLAYER}.$"
 
-SatatsuTown_EventScript_Go_Defeat_Gym_Text_0:
+RetsuTown_EventScript_Go_Defeat_Gym_Text_0:
 	.string "Didn't the Chief mention something\n"
 	.string "about a gym around here? I should\l"
 	.string "probably go check that out first...$"
 
-SatatsuTown_EventScript_GymSign_Text_0:
-	.string "Satatsu Town Gym\n"
+RetsuTown_EventScript_GymSign_Text_0:
+	.string "Retsu Town Gym\n"
 	.string "Leader Mach\n"
 	.string "The old man with a punch to pack!$"
 
-SatatsuTown_EventScript_NPC_1_Text_0:
+RetsuTown_EventScript_NPC_1_Text_0:
 	.string "I like using Sand-Attack to lower the\n"
 	.string "Accuracy of my opponents. What's your\l"
 	.string "favourite move?$"

@@ -62,26 +62,26 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "the second floor was built recently.\p"
 	.string "I traded POKéMON right away.$"
 
-KazaniVillage_MartMan::
+KatsikkiVillage_MartMan::
 	lock
-	message KazaniVillage_MartMan_Text_0
+	message KatsikkiVillage_MartMan_Text_0
 	waitmessage
-	pokemart KazaniVillage_Mart
-	msgbox KazaniVillage_MartMan_Text_1, MSGBOX_AUTOCLOSE
+	pokemart KatsikkiVillage_Mart
+	msgbox KatsikkiVillage_MartMan_Text_1, MSGBOX_AUTOCLOSE
 	release
 	end
 
 
 	.align 2
-KazaniVillage_Mart:
+KatsikkiVillage_Mart:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_NONE
 
-KazaniVillage_MartMan_Text_0:
+KatsikkiVillage_MartMan_Text_0:
 	.string "Welcome!\lWhat can I do for you today?$"
 
-KazaniVillage_MartMan_Text_1:
+KatsikkiVillage_MartMan_Text_1:
 	.string "Come back soon!$"

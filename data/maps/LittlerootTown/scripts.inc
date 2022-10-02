@@ -950,23 +950,23 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
-LatilynTown_EventScript_PlayerHouseSign::
+MarianTown_EventScript_PlayerHouseSign::
 	lockall
-	msgbox LatilynTown_EventScript_PlayerHouseSign_Text_0
+	msgbox MarianTown_EventScript_PlayerHouseSign_Text_0
 	releaseall
 	return
 
 
-LatilynTown_EventScript_LabSign::
+MarianTown_EventScript_LabSign::
 	lock
-	msgbox LatilynTown_EventScript_LabSign_Text_0
+	msgbox MarianTown_EventScript_LabSign_Text_0
 	release
 	return
 
 
-LatilynTown_EventScript_NoStarter::
+MarianTown_EventScript_NoStarter::
 	lock
-	msgbox LatilynTown_EventScript_NoStarter_Text_0
+	msgbox MarianTown_EventScript_NoStarter_Text_0
 	applymovement OBJ_EVENT_ID_PLAYER, moveBack
 	waitmovement 0
 	release
@@ -977,12 +977,12 @@ moveBack:
 	walk_down
 	step_end
 
-LatilynTown_EventScript_SeeRival_Upmost::
+MarianTown_EventScript_SeeRival_Upmost::
 	lock
 	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	applymovement 1, rival_walk_to_player_upmost
 	waitmovement 0
-	msgbox LatilynTown_EventScript_SeeRival_Upmost_Text_0
+	msgbox MarianTown_EventScript_SeeRival_Upmost_Text_0
 	applymovement 1, rival_walk_away
 	waitmovement 0
 	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
@@ -1001,12 +1001,12 @@ rival_walk_to_player_upmost:
 	walk_left
 	step_end
 
-LatilynTown_EventScript_SeeRival_Downmost::
+MarianTown_EventScript_SeeRival_Downmost::
 	lock
 	playbgm MUS_RG_ENCOUNTER_RIVAL, FALSE
 	applymovement 1, rival_walk_to_player_downmost
 	waitmovement 0
-	msgbox LatilynTown_EventScript_SeeRival_Downmost_Text_0
+	msgbox MarianTown_EventScript_SeeRival_Downmost_Text_0
 	applymovement 1, rival_walk_away
 	waitmovement 0
 	setflag FLAG_SEEN_RIVAL_FOR_FIRST_TIME
@@ -1033,40 +1033,40 @@ rival_walk_away:
 	walk_right
 	step_end
 
-LatilynTown_EventScript_OldLady::
+MarianTown_EventScript_OldLady::
 	lock
 	faceplayer
-	msgbox LatilynTown_EventScript_OldLady_Text_0
+	msgbox MarianTown_EventScript_OldLady_Text_0
 	release
 	end
 
 
-LatilynTown_EventScript_ScienceIsAmazing::
+MarianTown_EventScript_ScienceIsAmazing::
 	lock
 	faceplayer
-	msgbox LatilynTown_EventScript_ScienceIsAmazing_Text_0
+	msgbox MarianTown_EventScript_ScienceIsAmazing_Text_0
 	release
 	end
 
 
-LatilynTown_EventScript_RivalHouseSign::
+MarianTown_EventScript_RivalHouseSign::
 	lock
-	msgbox LatilynTown_EventScript_RivalHouseSign_Text_0
+	msgbox MarianTown_EventScript_RivalHouseSign_Text_0
 	release
 	end
 
 
-LatilynTown_EventScript_PlayerHouseSign_Text_0:
+MarianTown_EventScript_PlayerHouseSign_Text_0:
 	.string "{PLAYER}'s House$"
 
-LatilynTown_EventScript_LabSign_Text_0:
+MarianTown_EventScript_LabSign_Text_0:
 	.string "Prof. Spruce's Lab$"
 
-LatilynTown_EventScript_NoStarter_Text_0:
+MarianTown_EventScript_NoStarter_Text_0:
 	.string "I should probably head to the lab\n"
 	.string "first...$"
 
-LatilynTown_EventScript_SeeRival_Upmost_Text_0:
+MarianTown_EventScript_SeeRival_Upmost_Text_0:
 	.string "Well, well...\p"
 	.string "If it isn't the new kid! I'm your\n"
 	.string "neighbour, Aris, in case you cared.\l"
@@ -1077,14 +1077,13 @@ LatilynTown_EventScript_SeeRival_Upmost_Text_0:
 	.string "powerful Pokémon so I don't need some\l"
 	.string "weak one from Prof. Spruce.\p"
 	.string "If you want to know, I'll be heading to\n"
-	.string "Satatsu Town to get my first gym\l"
-	.string "badge.\p"
+	.string "Retsu Town to get my first gym badge.\p"
 	.string "That's right! I'm going to become the\n"
 	.string "strongest trainer ever...something\l"
 	.string "that you'll never even come close to!\p"
 	.string "Hahaha, see ya round chump!$"
 
-LatilynTown_EventScript_SeeRival_Downmost_Text_0:
+MarianTown_EventScript_SeeRival_Downmost_Text_0:
 	.string "Well, well...\p"
 	.string "If it isn't the new kid! I'm your\n"
 	.string "neighbour, Aris, in case you cared.\l"
@@ -1096,26 +1095,25 @@ LatilynTown_EventScript_SeeRival_Downmost_Text_0:
 	.string "powerful Pokémon so I don't need some\l"
 	.string "weak one from Prof. Spruce.\p"
 	.string "If you want to know, I'll be heading to\n"
-	.string "Satatsu Town to get my first gym\l"
-	.string "badge.\p"
+	.string "Retsu Town to get my first gym badge.\p"
 	.string "That's right! I'm going to become the\n"
 	.string "strongest trainer ever...\l"
 	.string "something that you'll never even come\l"
 	.string "close to!\p"
 	.string "Hahaha, see ya round chump!$"
 
-LatilynTown_EventScript_OldLady_Text_0:
+MarianTown_EventScript_OldLady_Text_0:
 	.string "You kids these days are lucky, you know.\p"
 	.string "Back in my day, we didn't have Poké Balls\n"
 	.string "yet so Pokémon had to follow behind us\l"
 	.string "instead.\p"
 	.string "They would sometimes even get lost!$"
 
-LatilynTown_EventScript_ScienceIsAmazing_Text_0:
+MarianTown_EventScript_ScienceIsAmazing_Text_0:
 	.string "The power of science is amazing!\p"
 	.string "Now you can emulate ROMs (like this one)\n"
 	.string "on a computer without needing a\l"
 	.string "physical copy of the game!$"
 
-LatilynTown_EventScript_RivalHouseSign_Text_0:
+MarianTown_EventScript_RivalHouseSign_Text_0:
 	.string "Aris' House$"

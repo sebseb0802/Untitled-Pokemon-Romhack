@@ -37,26 +37,26 @@ DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM:
 	.string "battle, it can still use a move learned\l"
 	.string "from a HIDDEN MACHINE (HM).$"
 
-SatatsuTown_MartMan::
+RetsuTown_MartMan::
 	lock
-	message SatatsuTown_MartMan_Text_0
+	message RetsuTown_MartMan_Text_0
 	waitmessage
-	pokemart SatatsuTown_Mart
-	msgbox SatatsuTown_MartMan_Text_1, MSGBOX_AUTOCLOSE
+	pokemart RetsuTown_Mart
+	msgbox RetsuTown_MartMan_Text_1, MSGBOX_AUTOCLOSE
 	release
 	end
 
 
 	.align 2
-SatatsuTown_Mart:
+RetsuTown_Mart:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_NONE
 
-SatatsuTown_MartMan_Text_0:
+RetsuTown_MartMan_Text_0:
 	.string "Welcome!\lWhat can I do for you today?$"
 
-SatatsuTown_MartMan_Text_1:
+RetsuTown_MartMan_Text_1:
 	.string "Come back soon!$"

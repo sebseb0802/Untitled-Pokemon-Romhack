@@ -3,7 +3,7 @@
   "name": "OldaleTown_PokemonCenter_1F",
   "layout": "LAYOUT_POKEMON_CENTER_1F",
   "music": "MUS_DP_POKE_CENTER_NIGHT",
-  "region_map_section": "MAPSEC_KAZANI_VILLAGE",
+  "region_map_section": "MAPSEC_KATSIKKI_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "KazaniVillage_MartMan",
+      "script": "KatsikkiVillage_MartMan",
       "flag": "0"
     }
   ],

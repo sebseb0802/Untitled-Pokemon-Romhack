@@ -338,27 +338,27 @@ OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
-KazaniVillage_EventScript_Block_Cave_Man::
-	goto_if_unset FLAG_KAZANI_VILLAGE_GIVEN_LETTER, KazaniVillage_EventScript_Block_Cave_Man_1
+KatsikkiVillage_EventScript_Block_Cave_Man::
+	goto_if_unset FLAG_Katsikki_VILLAGE_GIVEN_LETTER, KatsikkiVillage_EventScript_Block_Cave_Man_1
 	return
 
-KazaniVillage_EventScript_Block_Cave_Man_1:
+KatsikkiVillage_EventScript_Block_Cave_Man_1:
 	lock
 	faceplayer
-	msgbox KazaniVillage_EventScript_Block_Cave_Man_Text_0
+	msgbox KatsikkiVillage_EventScript_Block_Cave_Man_Text_0
 	closemessage
 	release
 	end
 
 
-KazaniVillage_EventScript_Pokeball1::
+KatsikkiVillage_EventScript_Pokeball1::
 	removeobject 2
 	giveitem ITEM_REPEL
 	closemessage
 	return
 
 
-KazaniVillage_EventScript_Block_Cave_Man_Text_0:
+KatsikkiVillage_EventScript_Block_Cave_Man_Text_0:
 	.string "I heard the chief was looking for you.\n"
 	.string "Might want to have a look at the house\l"
 	.string "on the very west side of the village.$"

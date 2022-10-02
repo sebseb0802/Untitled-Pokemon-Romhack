@@ -398,7 +398,7 @@ Route3_EventScript_Pokeball2::
 
 Route3_EventScript_NPC_1_Text_0:
 	.string "Look! Look! You can nearly see the top\n"
-	.string "of Kazani Mountain from here!$"
+	.string "of Katsikki Mountain from here!$"
 
 aromaLady1_intro::
 	.string "Don't you just love the scent of\n"

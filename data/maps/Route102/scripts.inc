@@ -214,7 +214,7 @@ route2_rival_walks_away:
 	step_end
 
 Route2_EventScript_Signpost_Text_0:
-	.string "{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu Town,\l{DOWN_ARROW}Route 10$"
+	.string "{LEFT_ARROW}Katsikki Village,\l{RIGHT_ARROW}Retsu Town,\l{DOWN_ARROW}Route 10$"
 
 Route2_EventScript_OldMan_Text_0:
 	.string "Isn't it amazing to be up here on these\n"

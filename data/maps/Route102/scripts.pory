@@ -145,7 +145,7 @@ script Route2_EventScript_Pokeball1{
 
 script Route2_EventScript_Signpost{
     lock
-    msgbox("{LEFT_ARROW}Kazani Village,\l{RIGHT_ARROW}Satatsu Town,\l{DOWN_ARROW}Route 10")
+    msgbox("{LEFT_ARROW}Katsikki Village,\l{RIGHT_ARROW}Retsu Town,\l{DOWN_ARROW}Route 10")
     closemessage
     release
     end

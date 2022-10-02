@@ -61,7 +61,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Route1_Youngster_2),
     },
 
-    [TRAINER_KAZANI_PASS_CAMPER_1] =
+    [TRAINER_KATSIKKI_PASS_CAMPER_1] =
     {
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -70,10 +70,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_KazaniPass_Camper_1),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_KatsikkiPass_Camper_1),
     },
 
-    [TRAINER_KAZANI_PASS_CAMPER_2] =
+    [TRAINER_KATSIKKI_PASS_CAMPER_2] =
     {
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -82,10 +82,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_KazaniPass_Camper_2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_KatsikkiPass_Camper_2),
     },
 
-    [TRAINER_KAZANI_PASS_CAMPER_3] =
+    [TRAINER_KATSIKKI_PASS_CAMPER_3] =
     {
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -94,7 +94,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_KazaniPass_Camper_3),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_KatsikkiPass_Camper_3),
     },
 
     [TRAINER_ROUTE_2_LASS_2] =
@@ -133,7 +133,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_CUSTOM_MOVES(sParty_Route2_Rival),
     },
 
-    [TRAINER_SATATSU_GYM_BLACK_BELT_1] =
+    [TRAINER_RETSU_GYM_BLACK_BELT_1] =
     {
         .trainerClass = TRAINER_CLASS_BLACK_BELT,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -142,10 +142,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_SatatsuGym_BlackBelt1),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_RetsuGym_BlackBelt1),
     },
 
-    [TRAINER_SATATSU_GYM_BLACK_BELT_2] =
+    [TRAINER_RETSU_GYM_BLACK_BELT_2] =
     {
         .trainerClass = TRAINER_CLASS_BLACK_BELT,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -154,10 +154,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_SatatsuGym_BlackBelt2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_RetsuGym_BlackBelt2),
     },
 
-    [TRAINER_SATATSU_GYM_LEADER_MACH] =
+    [TRAINER_RETSU_GYM_LEADER_MACH] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -166,7 +166,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
-        .party = ITEM_CUSTOM_MOVES(sParty_SatatsuGym_Mach),
+        .party = ITEM_CUSTOM_MOVES(sParty_RetsuGym_Mach),
     },
 
     [TRAINER_ROUTE_3_AROMA_LADY_1] =
@@ -241,7 +241,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Route4_PokeFan_1),
     },
 
-    [TRAINER_LAMINTINE_FOREST_BUG_CATCHER_1] =
+    [TRAINER_PIRKA_FOREST_BUG_CATCHER_1] =
     {
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -250,10 +250,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LamintineForest_BugCatcher1),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaForest_BugCatcher1),
     },
 
-    [TRAINER_LAMINTINE_FOREST_BUG_CATCHER_2] =
+    [TRAINER_PIRKA_FOREST_BUG_CATCHER_2] =
     {
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -262,10 +262,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LamintineForest_BugCatcher2),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaForest_BugCatcher2),
     },
 
-    [TRAINER_LAMINTINE_FOREST_LASS_4] =
+    [TRAINER_PIRKA_FOREST_LASS_4] =
     {
         .trainerClass = TRAINER_CLASS_LASS,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -274,67 +274,67 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_LamintineForest_Lass4),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaForest_Lass4),
     },
 
-    [TRAINER_GRUNT_MT_PYRE_1] =
+    [TRAINER_PIRKA_GYM_PICNICKER_2] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Gloria"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre1),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaGym_Picnicker2),
     },
 
-    [TRAINER_GRUNT_MT_PYRE_2] =
+    [TRAINER_PIRKA_GYM_YOUNGSTER_5] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Neil"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre2),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaGym_Youngster5),
     },
 
-    [TRAINER_GRUNT_MT_PYRE_3] =
+    [TRAINER_PIRKA_GYM_LASS_5] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lily"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre3),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaGym_Lass5),
     },
 
-    [TRAINER_GRUNT_WEATHER_INST_4] =
+    [TRAINER_PIRKA_GYM_CAMPER_5] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = _("Paul"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntWeatherInst4),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_PirkaGym_Camper5),
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_5] =
+    [TRAINER_PIRKA_GYM_PATTY] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
-        .items = {},
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LEADER_FLANNERY,
+        .trainerName = _("Patty"),
+        .items = {ITEM_SUPER_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout5),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .party = ITEM_CUSTOM_MOVES(sParty_PirkaGym_Patty),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_6] =

@@ -41,8 +41,8 @@ GraniteCave_1F_Text_ExplainFlash:
 
 `
 
-script KazaniPass_EventScript_Camper1{
-    trainerbattle_single(TRAINER_KAZANI_PASS_CAMPER_1, camper1_intro, camper1_outro)
+script KatsikkiPass_EventScript_Camper1{
+    trainerbattle_single(TRAINER_KATSIKKI_PASS_CAMPER_1, camper1_intro, camper1_outro)
 }
 
 text camper1_intro{
@@ -54,7 +54,7 @@ text camper1_outro{
 }
 
 
-script KazaniPass_EventScript_Pokeball1{
+script KatsikkiPass_EventScript_Pokeball1{
 	removeobject(2)
 	giveitem(ITEM_ORAN_BERRY)
 	closemessage

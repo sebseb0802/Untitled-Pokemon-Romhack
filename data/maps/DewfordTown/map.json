@@ -3,7 +3,7 @@
   "name": "DewfordTown",
   "layout": "LAYOUT_DEWFORD_TOWN",
   "music": "MUS_HG_CHERRYGROVE",
-  "region_map_section": "MAPSEC_SATATSU_TOWN",
+  "region_map_section": "MAPSEC_RETSU_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -48,7 +48,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SatatsuTown_EventScript_NPC_1",
+      "script": "RetsuTown_EventScript_NPC_1",
       "flag": "0"
     }
   ],
@@ -97,7 +97,7 @@
       "elevation": 0,
       "var": "VAR_GOTTEN_FIRST_BADGE",
       "var_value": "0",
-      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+      "script": "RetsuTown_EventScript_Go_Defeat_Gym"
     },
     {
       "type": "trigger",
@@ -106,7 +106,7 @@
       "elevation": 0,
       "var": "VAR_GOTTEN_FIRST_BADGE",
       "var_value": "0",
-      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+      "script": "RetsuTown_EventScript_Go_Defeat_Gym"
     },
     {
       "type": "trigger",
@@ -115,7 +115,7 @@
       "elevation": 0,
       "var": "VAR_GOTTEN_FIRST_BADGE",
       "var_value": "0",
-      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+      "script": "RetsuTown_EventScript_Go_Defeat_Gym"
     },
     {
       "type": "trigger",
@@ -124,7 +124,7 @@
       "elevation": 0,
       "var": "VAR_GOTTEN_FIRST_BADGE",
       "var_value": "0",
-      "script": "SatatsuTown_EventScript_Go_Defeat_Gym"
+      "script": "RetsuTown_EventScript_Go_Defeat_Gym"
     }
   ],
   "bg_events": [
@@ -134,7 +134,7 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SatatsuTown_EventScript_GymSign"
+      "script": "RetsuTown_EventScript_GymSign"
     }
   ]
 }

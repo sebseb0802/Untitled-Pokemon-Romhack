@@ -3,7 +3,7 @@
   "name": "OldaleTown",
   "layout": "LAYOUT_OLDALE_TOWN",
   "music": "MUS_DP_SOLACEON_NIGHT",
-  "region_map_section": "MAPSEC_KAZANI_VILLAGE",
+  "region_map_section": "MAPSEC_KATSIKKI_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "KazaniVillage_EventScript_Block_Cave_Man",
-      "flag": "FLAG_KAZANI_VILLAGE_GIVEN_LETTER"
+      "script": "KatsikkiVillage_EventScript_Block_Cave_Man",
+      "flag": "FLAG_Katsikki_VILLAGE_GIVEN_LETTER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -37,8 +37,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "KazaniVillage_EventScript_Pokeball1",
-      "flag": "FLAG_KAZANI_VILLAGE_POKEBALL1"
+      "script": "KatsikkiVillage_EventScript_Pokeball1",
+      "flag": "FLAG_Katsikki_VILLAGE_POKEBALL1"
     }
   ],
   "warp_events": [

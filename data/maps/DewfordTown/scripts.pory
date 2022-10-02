@@ -1,16 +1,16 @@
 mapscripts DewfordTown_MapScripts {
 	MAP_SCRIPT_ON_FRAME_TABLE [
-		VAR_SATATSU_SPOKEN_WITH_EGOR, 1: Speak_With_Egor_Satatsu
+		VAR_Retsu_SPOKEN_WITH_EGOR, 1: Speak_With_Egor_Retsu
 	] 
 }
 
-script Speak_With_Egor_Satatsu {
+script Speak_With_Egor_Retsu {
 	if (!flag(FLAG_MET_EGOR)) {
 		lock
     	applymovement(1, mysteryman_surprised)
     	waitmovement(0)
     	applymovement(1, mysteryman_walks_to_player)
-    	msgbox(format("So you must be, {PLAYER}. Who am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Kazani Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
+    	msgbox(format("So you must be, {PLAYER}. Who am I? Well that is none of your concern for the moment. For now, you can call me Egor.\pI am here to talk to you about the letter that Professor Spruce asked you to deliver to Chief Mach of Katsikki Village.\lRing any bells?"), MSGBOX_AUTOCLOSE)
     	applymovement(1, mysteryman_paces)
     	waitmovement(0)
     	msgbox(format("You see, the thing is that the aforementioned letter contains some very valuable information about the doings and whereabouts of a certa..."))
@@ -23,30 +23,30 @@ script Speak_With_Egor_Satatsu {
     	applymovement(1, mysteryman_walks_away)
     	waitmovement(0)
     	setflag(FLAG_MET_EGOR)
-		setvar(VAR_SATATSU_SPOKEN_WITH_EGOR, 0)
+		setvar(VAR_Retsu_SPOKEN_WITH_EGOR, 0)
 		removeobject(1)
     	release
     	end
 	}
 }
 
-script SatatsuTown_EventScript_Go_Defeat_Gym {
+script RetsuTown_EventScript_Go_Defeat_Gym {
 	lock
 	msgbox(format("Didn't the Chief mention something about a gym around here? I should probably go check that out first..."), MSGBOX_AUTOCLOSE)
-	applymovement(OBJ_EVENT_ID_PLAYER, satatsu_move_player_left)
+	applymovement(OBJ_EVENT_ID_PLAYER, Retsu_move_player_left)
 	waitmovement(0)
 	release
 	end
 }
 
-script SatatsuTown_EventScript_GymSign {
+script RetsuTown_EventScript_GymSign {
 	lock
-	msgbox(format("Satatsu Town Gym\nLeader Mach\nThe old man with a punch to pack!"), MSGBOX_AUTOCLOSE)
+	msgbox(format("Retsu Town Gym\nLeader Mach\nThe old man with a punch to pack!"), MSGBOX_AUTOCLOSE)
 	release
 	end
 }
 
-script SatatsuTown_EventScript_NPC_1 {
+script RetsuTown_EventScript_NPC_1 {
 	lock
 	msgbox(format("I like using Sand-Attack to lower the Accuracy of my opponents. What's your favourite move?"), MSGBOX_NPC)
 	release
@@ -75,7 +75,7 @@ movement mysteryman_walks_away {
     walk_fast_down * 6
 }
 
-movement satatsu_move_player_left {
+movement Retsu_move_player_left {
 	walk_left * 2	
 }
 
@@ -257,7 +257,7 @@ DewfordTown_EventScript_SailToSlateport::
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE109
 	copyobjectxytoperm LOCALID_BRINEY_R109
-	setvar VAR_SATATSU_SPOKEN_WITH_EGOR, 1
+	setvar VAR_Retsu_SPOKEN_WITH_EGOR, 1
 	setflag FLAG_MET_EGOR
 	release
 	end

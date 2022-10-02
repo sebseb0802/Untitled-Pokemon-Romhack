@@ -1,26 +1,26 @@
 PetalburgWoods_MapScripts::
 	.byte 0
 
-LamintineForest_EventScript_Pokeball1::
-	setflag FLAG_LAMINTINE_FOREST_POKEBALL_1
+PirkaForest_EventScript_Pokeball1::
+	setflag FLAG_PIRKA_FOREST_POKEBALL_1
 	removeobject 4
 	giveitem ITEM_RAWST_BERRY
 	closemessage
 	return
 
 
-LamintineForest_EventScript_BugCatcher1::
-	trainerbattle_single TRAINER_LAMINTINE_FOREST_BUG_CATCHER_1, bugcatcher1_intro, bugcatcher1_outro
+PirkaForest_EventScript_BugCatcher1::
+	trainerbattle_single TRAINER_PIRKA_FOREST_BUG_CATCHER_1, bugcatcher1_intro, bugcatcher1_outro
 	return
 
 
-LamintineForest_EventScript_BugCatcher2::
-	trainerbattle_single TRAINER_LAMINTINE_FOREST_BUG_CATCHER_2, bugcatcher2_intro, bugcatcher2_outro
+PirkaForest_EventScript_BugCatcher2::
+	trainerbattle_single TRAINER_PIRKA_FOREST_BUG_CATCHER_2, bugcatcher2_intro, bugcatcher2_outro
 	return
 
 
-LamintineForest_EventScript_Lass4::
-	trainerbattle_single TRAINER_LAMINTINE_FOREST_LASS_4, lass4_intro, lass4_outro
+PirkaForest_EventScript_Lass4::
+	trainerbattle_single TRAINER_PIRKA_FOREST_LASS_4, lass4_intro, lass4_outro
 	return
 
 

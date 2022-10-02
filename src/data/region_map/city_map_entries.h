@@ -1,22 +1,22 @@
 static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
 {
     {
-        .mapSecId = MAPSEC_LATILYN_TOWN,
+        .mapSecId = MAPSEC_MARIAN_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Littleroot_0,
     },
     {
-        .mapSecId = MAPSEC_KAZANI_VILLAGE,
+        .mapSecId = MAPSEC_KATSIKKI_VILLAGE,
         .index = 0,
         .tilemap = gPokenavCityMap_Oldale_0,
     },
     {
-        .mapSecId = MAPSEC_SATATSU_TOWN,
+        .mapSecId = MAPSEC_RETSU_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Dewford_0,
     },
     {
-        .mapSecId = MAPSEC_LAVARIDGE_TOWN,
+        .mapSecId = MAPSEC_PIRKA_CITY,
         .index = 0,
         .tilemap = gPokenavCityMap_Lavaridge_0,
     },

@@ -44,11 +44,11 @@
 #define FLAG_RECEIVED_STARTER    0x20 // Unused Flag
 #define FLAG_ROUTE1_POKEBALL_1   0x21 // Unused Flag
 #define FLAG_ROUTE1_POKEBALL_2   0x22 // Unused Flag
-#define FLAG_KAZANI_VILLAGE_GIVEN_LETTER        0x23 // Unused Flag
+#define FLAG_Katsikki_VILLAGE_GIVEN_LETTER        0x23 // Unused Flag
 #define FLAG_RECEIVED_TM_RETURN    0x24 // Unused Flag
-#define FLAG_KAZANI_PASS_POKEBALL1    0x25 // Unused Flag
-#define FLAG_KAZANI_VILLAGE_POKEBALL1    0x26 // Unused Flag
-#define FLAG_KAZANI_PASS_POKEBALL2    0x27 // Unused Flag
+#define FLAG_Katsikki_PASS_POKEBALL1    0x25 // Unused Flag
+#define FLAG_Katsikki_VILLAGE_POKEBALL1    0x26 // Unused Flag
+#define FLAG_Katsikki_PASS_POKEBALL2    0x27 // Unused Flag
 #define FLAG_ROUTE2_POKEBALL_1    0x28 // Unused Flag
 #define FLAG_SEEN_RIVAL_FOR_FIRST_TIME    0x29 // Unused Flag
 #define FLAG_ROUTE2_HIDDENITEM_1    0x2A // Unused Flag
@@ -58,8 +58,8 @@
 #define FLAG_ROUTE3_POKEBALL_2   0x2E // Unused Flag
 #define FLAG_ROUTE4_POKEBALL_1   0x2F // Unused Flag
 #define FLAG_ROUTE4_POKEBALL_2    0x30 // Unused Flag
-#define FLAG_LAMINTINE_FOREST_HIDDENITEM_1    0x31 // Unused Flag
-#define FLAG_LAMINTINE_FOREST_POKEBALL_1    0x32 // Unused Flag
+#define FLAG_PIRKA_FOREST_HIDDENITEM_1    0x31 // Unused Flag
+#define FLAG_PIRKA_FOREST_POKEBALL_1    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag

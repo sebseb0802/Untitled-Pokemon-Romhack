@@ -1,4 +1,4 @@
-script LatilynTown_EventScript_StartAdventure {
+script MarianTown_EventScript_StartAdventure {
     lock
     msgbox(format("Hey {PLAYER}!"))
     closemessage

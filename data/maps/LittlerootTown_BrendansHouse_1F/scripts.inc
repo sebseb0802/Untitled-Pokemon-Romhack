@@ -1,18 +1,18 @@
-LatilynTown_EventScript_StartAdventure::
+MarianTown_EventScript_StartAdventure::
 	lock
-	msgbox LatilynTown_EventScript_StartAdventure_Text_0
+	msgbox MarianTown_EventScript_StartAdventure_Text_0
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, move_player
 	waitmovement 0
 	applymovement 1, mum_face_player
 	waitmovement 0
-	msgbox LatilynTown_EventScript_StartAdventure_Text_1
-	msgbox LatilynTown_EventScript_StartAdventure_Text_2
+	msgbox MarianTown_EventScript_StartAdventure_Text_1
+	msgbox MarianTown_EventScript_StartAdventure_Text_2
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox LatilynTown_EventScript_StartAdventure_Text_3
+	msgbox MarianTown_EventScript_StartAdventure_Text_3
 	waitfanfare
 	setflag FLAG_SYS_POKENAV_GET
-	msgbox LatilynTown_EventScript_StartAdventure_Text_4
+	msgbox MarianTown_EventScript_StartAdventure_Text_4
 	closemessage
 	setvar VAR_ADVENTURE_STARTED, 1
 	release
@@ -475,10 +475,10 @@ PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
 	.string "There are still unknown POKéMON.$"
 
-LatilynTown_EventScript_StartAdventure_Text_0:
+MarianTown_EventScript_StartAdventure_Text_0:
 	.string "Hey {PLAYER}!$"
 
-LatilynTown_EventScript_StartAdventure_Text_1:
+MarianTown_EventScript_StartAdventure_Text_1:
 	.string "How did you sleep?\p"
 	.string "I know it's only been a few weeks, but\n"
 	.string "Professor Spruce was looking for you\l"
@@ -494,14 +494,14 @@ LatilynTown_EventScript_StartAdventure_Text_1:
 	.string "the lab.\p"
 	.string "Better get going then!$"
 
-LatilynTown_EventScript_StartAdventure_Text_2:
+MarianTown_EventScript_StartAdventure_Text_2:
 	.string "...Oh! I almost forgot!\p"
 	.string "Here's a Pokénav!$"
 
-LatilynTown_EventScript_StartAdventure_Text_3:
+MarianTown_EventScript_StartAdventure_Text_3:
 	.string "Obtained a Pokénav!$"
 
-LatilynTown_EventScript_StartAdventure_Text_4:
+MarianTown_EventScript_StartAdventure_Text_4:
 	.string "You can do all sorts of nifty things\n"
 	.string "with it!\l"
 	.string "I'm sure you'll work it out.\p"

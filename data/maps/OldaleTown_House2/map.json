@@ -3,7 +3,7 @@
   "name": "OldaleTown_House2",
   "layout": "LAYOUT_HOUSE2",
   "music": "MUS_DP_SOLACEON_NIGHT",
-  "region_map_section": "MAPSEC_KAZANI_VILLAGE",
+  "region_map_section": "MAPSEC_KATSIKKI_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

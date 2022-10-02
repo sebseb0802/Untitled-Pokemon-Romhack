@@ -1,0 +1,79 @@
+raw `
+LavaridgeTown_Gym_1F_MapScripts::
+	.byte 0
+`
+
+script PirkaGym_EventScript_Picnicker_2 {
+    trainerbattle_single(TRAINER_PIRKA_GYM_PICNICKER_2, picnicker2_intro, picnicker2_outro)
+}
+
+script PirkaGym_EventScript_Youngster_5 {
+    trainerbattle_single(TRAINER_PIRKA_GYM_YOUNGSTER_5, youngster5_intro, youngster5_outro)
+}
+
+script PirkaGym_EventScript_Lass_5 {
+    trainerbattle_single(TRAINER_PIRKA_GYM_LASS_5, lass5_intro, lass5_outro)
+}
+
+script PirkaGym_EventScript_Camper_5 {
+    trainerbattle_single(TRAINER_PIRKA_GYM_CAMPER_5, camper5_intro, camper5_outro)
+}
+
+script PirkaGym_EventScript_Patty {
+    trainerbattle_single(TRAINER_PIRKA_GYM_PATTY, patty_intro, patty_outro, PirkaGym_EventScript_AfterPatty, FALSE)
+}
+
+text picnicker2_intro {
+    format("Is it just me or is it a little toasty in here?")
+}
+
+text picnicker2_outro {
+    format("I'm burning up here!")
+}
+
+text youngster5_intro {
+    format("Let's take a look at your Pokémon, hotshot!")
+}
+
+text youngster5_outro {
+    format("That was fire!")
+}
+
+text lass5_intro {
+    format("Took a wrong turn, did we?")
+}
+
+text lass5_outro {
+    format("Maybe I was wrong to even challenge you...")
+}
+
+text camper5_intro {
+    format("I need to check if Patty's gonna be too sizzling hot for you!")
+}
+
+text camper5_outro {
+    format("Jeez! I'm all burnt out!")
+}
+
+text patty_intro {
+    format("Look what we have here! A fresh, young one straight from Marian!\lYou know, it's nice to see someone from my parts around here, let's me know if ol' Spruce as been keeping up with it.\lNow then!\lLet's see if you can take the burn!")
+}
+
+text patty_outro {
+    format("My fiery spirit needs a rest from that...")
+}
+
+script PirkaGym_EventScript_AfterPatty {
+    lock
+    msgbox(format("Wow-wee!\nNow that was something that I haven't felt for a while! A real invigoratin' battle that was!\lHere's this."))
+    playfanfare(MUS_HG_OBTAIN_BADGE)
+    msgbox(format("{PLAYER} obtained the Sizzle Badge from Patty!"))
+    waitfanfare
+    setflag(FLAG_BADGE02_GET)
+    msgbox(format("Oh, almost forgot!"))
+    giveitem(ITEM_TM11_SUNNY_DAY)
+    msgbox(format("Use Sunny Day to start sizzling your opponents before they make a move! Burn, baby, burn!\lOh, yeah!\lLarry's back in town now, so you can take the boat to the mainland from here! Just head to the southeast part of the city and you'll be on your way in no time!\nI'll see you around, hotshot!"))
+    closemessage
+    release
+    end
+}

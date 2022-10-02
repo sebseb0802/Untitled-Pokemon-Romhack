@@ -3,7 +3,7 @@
   "name": "LittlerootTown_BrendansHouse_2F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
   "music": "MUS_DP_TWINLEAF_NIGHT",
-  "region_map_section": "MAPSEC_LATILYN_TOWN",
+  "region_map_section": "MAPSEC_MARIAN_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -175,7 +175,7 @@
       "elevation": 0,
       "var": "VAR_RECEIVED_RUNNING_SHOES",
       "var_value": "0",
-      "script": "LatilynTown_EventScript_Give_Running_Shoes"
+      "script": "MarianTown_EventScript_Give_Running_Shoes"
     },
     {
       "type": "trigger",
@@ -184,7 +184,7 @@
       "elevation": 0,
       "var": "VAR_RECEIVED_RUNNING_SHOES",
       "var_value": "0",
-      "script": "LatilynTown_EventScript_Give_Running_Shoes"
+      "script": "MarianTown_EventScript_Give_Running_Shoes"
     },
     {
       "type": "trigger",
@@ -193,7 +193,7 @@
       "elevation": 0,
       "var": "VAR_RECEIVED_RUNNING_SHOES",
       "var_value": "0",
-      "script": "LatilynTown_EventScript_Give_Running_Shoes"
+      "script": "MarianTown_EventScript_Give_Running_Shoes"
     },
     {
       "type": "trigger",
@@ -202,7 +202,7 @@
       "elevation": 0,
       "var": "VAR_RECEIVED_RUNNING_SHOES",
       "var_value": "0",
-      "script": "LatilynTown_EventScript_Give_Running_Shoes"
+      "script": "MarianTown_EventScript_Give_Running_Shoes"
     }
   ],
   "bg_events": [

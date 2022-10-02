@@ -64,16 +64,16 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "I traded POKéMON right away.$"
 
 `
-script KazaniVillage_MartMan {
+script KatsikkiVillage_MartMan {
     lock
     message("Welcome!\lWhat can I do for you today?")
     waitmessage
-    pokemart(KazaniVillage_Mart)
+    pokemart(KatsikkiVillage_Mart)
     msgbox("Come back soon!", MSGBOX_AUTOCLOSE)
     release
     end
 }
-mart KazaniVillage_Mart {
+mart KatsikkiVillage_Mart {
     ITEM_POKE_BALL
     ITEM_POTION
     ITEM_ANTIDOTE

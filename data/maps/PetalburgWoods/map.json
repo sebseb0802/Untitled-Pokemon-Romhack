@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "LamintineForest_EventScript_BugCatcher1",
+      "script": "PirkaForest_EventScript_BugCatcher1",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "LamintineForest_EventScript_BugCatcher2",
+      "script": "PirkaForest_EventScript_BugCatcher2",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "LamintineForest_EventScript_Lass4",
+      "script": "PirkaForest_EventScript_Lass4",
       "flag": "0"
     },
     {
@@ -63,8 +63,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LamintineForest_EventScript_Pokeball1",
-      "flag": "FLAG_LAMINTINE_FOREST_POKEBALL_1"
+      "script": "PirkaForest_EventScript_Pokeball1",
+      "flag": "FLAG_PIRKA_FOREST_POKEBALL_1"
     }
   ],
   "warp_events": [
@@ -107,7 +107,7 @@
       "y": 14,
       "elevation": 3,
       "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_LAMINTINE_FOREST_HIDDENITEM_1"
+      "flag": "FLAG_PIRKA_FOREST_HIDDENITEM_1"
     }
   ]
 }

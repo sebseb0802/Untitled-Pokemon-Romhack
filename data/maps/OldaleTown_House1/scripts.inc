@@ -13,30 +13,30 @@ OldaleTown_House1_Text_LeftPokemonGoesOutFirst:
 	.string "of your POKéMON.\p"
 	.string "It could give you an advantage.$"
 
-KazaniVillage_House1_EventScript_KazaniChief::
+KatsikkiVillage_House1_EventScript_KatsikkiChief::
 	lock
 	faceplayer
-	goto_if_unset FLAG_KAZANI_VILLAGE_GIVEN_LETTER, KazaniVillage_House1_EventScript_KazaniChief_1
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_5
+	goto_if_unset FLAG_Katsikki_VILLAGE_GIVEN_LETTER, KatsikkiVillage_House1_EventScript_KatsikkiChief_1
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_5
 	closemessage
 	return
 
-KazaniVillage_House1_EventScript_KazaniChief_1:
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_0
+KatsikkiVillage_House1_EventScript_KatsikkiChief_1:
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_0
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_1
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_1
 	waitfanfare
 	applymovement 1, chief_turns_to_read
 	waitmovement 0
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_2
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_2
 	applymovement 1, chief_surprised
 	waitmovement 0
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_3
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_3
 	applymovement 1, chief_turns_to_player
-	msgbox KazaniVillage_House1_EventScript_KazaniChief_Text_4
+	msgbox KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_4
 	release
 	closemessage
-	setflag FLAG_KAZANI_VILLAGE_GIVEN_LETTER
+	setflag FLAG_Katsikki_VILLAGE_GIVEN_LETTER
 	end
 
 
@@ -52,7 +52,7 @@ chief_turns_to_player:
 	face_player
 	step_end
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_0:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_0:
 	.string "...\p"
 	.string "And you are?\p"
 	.string "...\p"
@@ -62,31 +62,31 @@ KazaniVillage_House1_EventScript_KazaniChief_Text_0:
 	.string "handing over the letter that he asked\l"
 	.string "you to deliver?$"
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_1:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_1:
 	.string "{PLAYER} handed the letter over to\n"
 	.string "the Chief.$"
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_2:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_2:
 	.string "Hmm...\p"
 	.string "Uh-huh...$"
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_3:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_3:
 	.string "I see...\p"
 	.string "Very well then.$"
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_4:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_4:
 	.string "Thank you very much for this,\n"
 	.string "{PLAYER}. There's no need for you to\l"
 	.string "go all the way back to Professor\l"
 	.string "Spruce, I can send a messenger.\p"
-	.string "There is a gym in Satatsu Town, just\n"
-	.string "east of here! Simply take the Kazani\l"
-	.string "Pass on the east side of this village\l"
-	.string "onto Route 2 and you'll be on your way\l"
-	.string "in no time!\p"
+	.string "There is a gym in Retsu Town, just east\n"
+	.string "of here! Simply take the Katsikki Pass\l"
+	.string "on the east side of this village onto\l"
+	.string "Route 2 and you'll be on your way in no\l"
+	.string "time!\p"
 	.string "Good luck, {PLAYER}! I'm sure our\n"
 	.string "paths will cross again soon.$"
 
-KazaniVillage_House1_EventScript_KazaniChief_Text_5:
+KatsikkiVillage_House1_EventScript_KatsikkiChief_Text_5:
 	.string "Ah, {PLAYER}! How are you faring? Worn\n"
 	.string "down yet from all your travels?$"

@@ -39,16 +39,16 @@ DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM:
 	.string "from a HIDDEN MACHINE (HM).$"
 
 `
-script SatatsuTown_MartMan {
+script RetsuTown_MartMan {
     lock
     message("Welcome!\lWhat can I do for you today?")
     waitmessage
-    pokemart(SatatsuTown_Mart)
+    pokemart(RetsuTown_Mart)
     msgbox("Come back soon!", MSGBOX_AUTOCLOSE)
     release
     end
 }
-mart SatatsuTown_Mart {
+mart RetsuTown_Mart {
     ITEM_POKE_BALL
     ITEM_POTION
     ITEM_ANTIDOTE

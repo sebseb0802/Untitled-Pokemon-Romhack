@@ -373,7 +373,7 @@ script Route3_EventScript_Youngster_4 {
 
 script Route3_EventScript_NPC_1 {
     lock
-    msgbox(format("Look! Look! You can nearly see the top of Kazani Mountain from here!"))
+    msgbox(format("Look! Look! You can nearly see the top of Katsikki Mountain from here!"))
     release
     end
 }

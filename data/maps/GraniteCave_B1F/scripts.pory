@@ -11,12 +11,12 @@ GraniteCave_B1F_SetHoleWarp:
 	end
 `
 
-script KazaniPass_EventScript_Camper2{
-    trainerbattle_single(TRAINER_KAZANI_PASS_CAMPER_2, camper2_intro, camper2_outro)
+script KatsikkiPass_EventScript_Camper2{
+    trainerbattle_single(TRAINER_KATSIKKI_PASS_CAMPER_2, camper2_intro, camper2_outro)
 }
 
 text camper2_intro{
-    format("On your way to Satatsu Town? I'll beat you there!")
+    format("On your way to Retsu Town? I'll beat you there!")
 }
 
 text camper2_outro{
@@ -24,8 +24,8 @@ text camper2_outro{
 }
 
 
-script KazaniPass_EventScript_Camper3{
-    trainerbattle_single(TRAINER_KAZANI_PASS_CAMPER_3, camper3_intro, camper3_outro)
+script KatsikkiPass_EventScript_Camper3{
+    trainerbattle_single(TRAINER_KATSIKKI_PASS_CAMPER_3, camper3_intro, camper3_outro)
 }
 
 text camper3_intro{
@@ -37,7 +37,7 @@ text camper3_outro{
 }
 
 
-script KazaniPass_EventScript_Give_Return{
+script KatsikkiPass_EventScript_Give_Return{
     lock
     faceplayer
     if (!flag(FLAG_RECEIVED_TM_RETURN)){
@@ -53,7 +53,7 @@ script KazaniPass_EventScript_Give_Return{
 }
 
 
-script KazaniPass_EventScript_Pokeball2{
+script KatsikkiPass_EventScript_Pokeball2{
     removeobject(2)
     giveitem(ITEM_ESCAPE_ROPE)
 	closemessage

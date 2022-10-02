@@ -3,7 +3,7 @@
   "name": "DewfordTown_Gym",
   "layout": "LAYOUT_DEWFORD_TOWN_GYM",
   "music": "MUS_HG_GYM",
-  "region_map_section": "MAPSEC_SATATSU_TOWN",
+  "region_map_section": "MAPSEC_RETSU_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SatatsuGym_EventScript_BlackBelt1",
+      "script": "RetsuGym_EventScript_BlackBelt1",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "SatatsuGym_EventScript_BlackBelt2",
+      "script": "RetsuGym_EventScript_BlackBelt2",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SatatsuGym_EventScript_LeaderMach",
+      "script": "RetsuGym_EventScript_LeaderMach",
       "flag": "0"
     }
   ],

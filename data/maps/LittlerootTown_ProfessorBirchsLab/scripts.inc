@@ -1000,14 +1000,14 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
 
-LatilynTown_EventScript_StartLabSequence::
+MarianTown_EventScript_StartLabSequence::
 	lock
 	applymovement OBJ_EVENT_ID_PLAYER, intro_Player
 	waitmovement 0
-	msgbox LatilynTown_EventScript_StartLabSequence_Text_0
+	msgbox MarianTown_EventScript_StartLabSequence_Text_0
 	applymovement 1, face_Prof
 	waitmovement 0
-	msgbox LatilynTown_EventScript_StartLabSequence_Text_1
+	msgbox MarianTown_EventScript_StartLabSequence_Text_1
 	release
 	return
 
@@ -1021,87 +1021,87 @@ face_Prof:
 	face_right
 	step_end
 
-LatilynTown_EventScript_ChooseStarter::
-	goto_if_unset FLAG_RECEIVED_STARTER, LatilynTown_EventScript_ChooseStarter_1
+MarianTown_EventScript_ChooseStarter::
+	goto_if_unset FLAG_RECEIVED_STARTER, MarianTown_EventScript_ChooseStarter_1
 	return
 
-LatilynTown_EventScript_ChooseStarter_1:
+MarianTown_EventScript_ChooseStarter_1:
 	lock
 	multichoice 25, 5, MULTI_STARTER_CHOICE, 0
 	closemessage
 	compare VAR_RESULT, 0
-	goto_if_eq LatilynTown_EventScript_ChooseStarter_5
+	goto_if_eq MarianTown_EventScript_ChooseStarter_5
 	compare VAR_RESULT, 1
-	goto_if_eq LatilynTown_EventScript_ChooseStarter_6
+	goto_if_eq MarianTown_EventScript_ChooseStarter_6
 	compare VAR_RESULT, 2
-	goto_if_eq LatilynTown_EventScript_ChooseStarter_7
-LatilynTown_EventScript_ChooseStarter_4:
+	goto_if_eq MarianTown_EventScript_ChooseStarter_7
+MarianTown_EventScript_ChooseStarter_4:
 	applymovement OBJ_EVENT_ID_PLAYER, return_Player
 	waitmovement 0
 	applymovement 1, prof_Turn
 	waitmovement 0
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_3
+	msgbox MarianTown_EventScript_ChooseStarter_Text_3
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_4
+	msgbox MarianTown_EventScript_ChooseStarter_Text_4
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_NATIONAL_DEX
 	setflag FLAG_SYS_POKEMON_GET
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_5
+	msgbox MarianTown_EventScript_ChooseStarter_Text_5
 	giveitem ITEM_POKE_BALL, 10
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_6
+	msgbox MarianTown_EventScript_ChooseStarter_Text_6
 	setvar VAR_RECEIVED_POKEDEX_AND_STARTER, 1
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_7
+	msgbox MarianTown_EventScript_ChooseStarter_Text_7
 	applymovement 1, prof_Alert
 	closemessage
 	waitmovement 0
 	applymovement 1, prof_Move
 	waitmovement 0
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_8
+	msgbox MarianTown_EventScript_ChooseStarter_Text_8
 	playfanfare MUS_OBTAIN_ITEM
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_9
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_10
+	msgbox MarianTown_EventScript_ChooseStarter_Text_9
+	msgbox MarianTown_EventScript_ChooseStarter_Text_10
 	setvar VAR_HAS_STARTER, 1
 	release
 	return
 
-LatilynTown_EventScript_ChooseStarter_5:
+MarianTown_EventScript_ChooseStarter_5:
 	showmonpic SPECIES_TEPIG, 5, 1
 	playmoncry SPECIES_TEPIG, CRY_MODE_NORMAL
 	waitmoncry
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_0
+	msgbox MarianTown_EventScript_ChooseStarter_Text_0
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	givemon SPECIES_TEPIG, 5
 	closemessage
 	hidemonpic
 	setflag FLAG_RECEIVED_STARTER
-	goto LatilynTown_EventScript_ChooseStarter_4
+	goto MarianTown_EventScript_ChooseStarter_4
 
-LatilynTown_EventScript_ChooseStarter_6:
+MarianTown_EventScript_ChooseStarter_6:
 	showmonpic SPECIES_TOTODILE, 5, 1
 	playmoncry SPECIES_TOTODILE, CRY_MODE_NORMAL
 	waitmoncry
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_1
+	msgbox MarianTown_EventScript_ChooseStarter_Text_1
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	givemon SPECIES_TOTODILE, 5
 	closemessage
 	hidemonpic
 	setflag FLAG_RECEIVED_STARTER
-	goto LatilynTown_EventScript_ChooseStarter_4
+	goto MarianTown_EventScript_ChooseStarter_4
 
-LatilynTown_EventScript_ChooseStarter_7:
+MarianTown_EventScript_ChooseStarter_7:
 	showmonpic SPECIES_TURTWIG, 5, 1
 	playmoncry SPECIES_TURTWIG, CRY_MODE_NORMAL
 	waitmoncry
-	msgbox LatilynTown_EventScript_ChooseStarter_Text_2
+	msgbox MarianTown_EventScript_ChooseStarter_Text_2
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	givemon SPECIES_TURTWIG, 5
 	closemessage
 	hidemonpic
 	setflag FLAG_RECEIVED_STARTER
-	goto LatilynTown_EventScript_ChooseStarter_4
+	goto MarianTown_EventScript_ChooseStarter_4
 
 
 return_Player:
@@ -1129,7 +1129,7 @@ prof_Move:
 	face_down
 	step_end
 
-LatilynTown_EventScript_StartLabSequence_Text_0:
+MarianTown_EventScript_StartLabSequence_Text_0:
 	.string "Ah. Good to finally meet you {PLAYER}.\p"
 	.string "I know it's a long way from Unova to\n"
 	.string "here but as it's been a few weeks now\l"
@@ -1144,52 +1144,52 @@ LatilynTown_EventScript_StartLabSequence_Text_0:
 	.string "research!\p"
 	.string "Now!$"
 
-LatilynTown_EventScript_StartLabSequence_Text_1:
+MarianTown_EventScript_StartLabSequence_Text_1:
 	.string "Choose wisely from one of those very\n"
 	.string "special and rare Pokémon from the\l"
 	.string "machine over there to assist you in\l"
 	.string "your journey. I'm sure Tepig is a\l"
 	.string "familiar face!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_0:
+MarianTown_EventScript_ChooseStarter_Text_0:
 	.string "{PLAYER} chose Tepig!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_1:
+MarianTown_EventScript_ChooseStarter_Text_1:
 	.string "{PLAYER} chose Totodile!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_2:
+MarianTown_EventScript_ChooseStarter_Text_2:
 	.string "{PLAYER} chose Turtwig!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_3:
+MarianTown_EventScript_ChooseStarter_Text_3:
 	.string "Great choice! Now for the slightly less\n"
 	.string "interesting technical stuff!\p"
 	.string "Haha! Here's a Pokédex!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_4:
+MarianTown_EventScript_ChooseStarter_Text_4:
 	.string "Obtained the Pokédex!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_5:
+MarianTown_EventScript_ChooseStarter_Text_5:
 	.string "...and some Poké Balls!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_6:
+MarianTown_EventScript_ChooseStarter_Text_6:
 	.string "Use that high-tech digital\n"
 	.string "encyclopedia - or Pokédex - to record\l"
 	.string "data on all of the Pokémon you meet.\p"
 	.string "My request isn't anymore complicated\n"
 	.string "than that!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_7:
+MarianTown_EventScript_ChooseStarter_Text_7:
 	.string "...$"
 
-LatilynTown_EventScript_ChooseStarter_Text_8:
+MarianTown_EventScript_ChooseStarter_Text_8:
 	.string "Ah yes, if you wouldn't mind, could you\n"
 	.string "pass this letter along to the chief in\l"
-	.string "Kazani Village? It's just north of\l"
+	.string "Katsikki Village? It's just north of\l"
 	.string "Route 1, on the mountain cliff.$"
 
-LatilynTown_EventScript_ChooseStarter_Text_9:
+MarianTown_EventScript_ChooseStarter_Text_9:
 	.string "Obtained Spruce's Letter!$"
 
-LatilynTown_EventScript_ChooseStarter_Text_10:
+MarianTown_EventScript_ChooseStarter_Text_10:
 	.string "It's hard to miss, really. Such a\n"
 	.string "charming place!$"

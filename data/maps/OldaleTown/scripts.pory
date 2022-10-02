@@ -342,8 +342,8 @@ OldaleTown_Text_TownSign:
 
 `
 
-script KazaniVillage_EventScript_Block_Cave_Man{
-    if (!flag(FLAG_KAZANI_VILLAGE_GIVEN_LETTER)){
+script KatsikkiVillage_EventScript_Block_Cave_Man{
+    if (!flag(FLAG_Katsikki_VILLAGE_GIVEN_LETTER)){
 		lock
 		faceplayer
         msgbox(format("I heard the chief was looking for you. Might want to have a look at the house on the very west side of the village."))
@@ -353,7 +353,7 @@ script KazaniVillage_EventScript_Block_Cave_Man{
     }
 }
 
-script KazaniVillage_EventScript_Pokeball1{
+script KatsikkiVillage_EventScript_Pokeball1{
 	removeobject(2)
 	giveitem(ITEM_REPEL)
 	closemessage

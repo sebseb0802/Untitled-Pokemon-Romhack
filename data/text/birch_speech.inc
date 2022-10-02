@@ -43,7 +43,7 @@ gText_Birch_SoItsPlayer::
 gText_Birch_YourePlayer::
 	.string "Ah, okay!\p"
 	.string "You're {PLAYER}{KUN} who's moved to\n"
-	.string "Latilyn all the way from Unova!\p"
+	.string "Marian all the way from Unova!\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
