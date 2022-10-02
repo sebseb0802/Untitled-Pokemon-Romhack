@@ -1,0 +1,47 @@
+raw `
+PetalburgWoods_MapScripts::
+	.byte 0
+`
+
+script LamintineForest_EventScript_Pokeball1 {
+    setflag(FLAG_LAMINTINE_FOREST_POKEBALL_1)
+    removeobject(4)
+    giveitem(ITEM_RAWST_BERRY)
+    closemessage
+}
+
+script LamintineForest_EventScript_BugCatcher1 {
+    trainerbattle_single(TRAINER_LAMINTINE_FOREST_BUG_CATCHER_1, bugcatcher1_intro, bugcatcher1_outro)
+}
+
+script LamintineForest_EventScript_BugCatcher2 {
+    trainerbattle_single(TRAINER_LAMINTINE_FOREST_BUG_CATCHER_2, bugcatcher2_intro, bugcatcher2_outro)
+}
+
+script LamintineForest_EventScript_Lass4 {
+    trainerbattle_single(TRAINER_LAMINTINE_FOREST_LASS_4, lass4_intro, lass4_outro)
+}
+
+text bugcatcher1_intro {
+    format("Some people say that bug types are weak! I think they're the best type there is!")
+}
+
+text bugcatcher1_outro {
+    format("Still the best type...")
+}
+
+text bugcatcher2_intro {
+    format("This forest is filled to the brim with awesome bug types!")
+}
+
+text lass4_intro {
+    format("You may think all of these bugs creep me out... but I just love them!")
+}
+
+text lass4_outro {
+    format("Such strong Pokémon!")
+}
+
+text bugcatcher2_outro {
+    format("You seem like someone who'd enjoy bug types too!")
+}

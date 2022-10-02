@@ -253,32 +253,47 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Route4_PokeFan_1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LamintineForest_BugCatcher1[] = {
     {
     .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
+    .lvl = 13,
+    .species = SPECIES_VENIPEDE,
+    },
+    {
+    .iv = 0,
+    .lvl = 13,
+    .species = SPECIES_BUTTERFREE,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LamintineForest_BugCatcher2[] = {
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .lvl = 13,
+    .species = SPECIES_SEWADDLE,
     },
     {
     .iv = 0,
     .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .species = SPECIES_DUSTOX,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_BEEDRILL,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LamintineForest_Lass4[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .lvl = 14,
+    .species = SPECIES_SPINARAK,
+    },
+    {
+    .iv = 0,
+    .lvl = 14,
+    .species = SPECIES_SCYTHER,
     }
 };
 
