@@ -41,7 +41,7 @@ script RetsuTown_EventScript_Go_Defeat_Gym {
 
 script RetsuTown_EventScript_GymSign {
 	lock
-	msgbox(format("Retsu Town Gym\nLeader Mach\nThe old man with a punch to pack!"), MSGBOX_AUTOCLOSE)
+	msgbox(format("Retsu Town Gym\lLeader Mach\lThe old man with a punch to pack!"), MSGBOX_AUTOCLOSE)
 	release
 	end
 }
